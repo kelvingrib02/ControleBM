@@ -1,0 +1,6 @@
+@ControleBM.API_HostAddress = http://localhost:5253
+
+GET {{ControleBM.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

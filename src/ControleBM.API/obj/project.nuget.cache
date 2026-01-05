@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "7CKk9QGAH64=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.API\\ControleBM.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\55129\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.1\\microsoft.aspnetcore.openapi.10.0.1.nupkg.sha512",
+    "C:\\Users\\55129\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
