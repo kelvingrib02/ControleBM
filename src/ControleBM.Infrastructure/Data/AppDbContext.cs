@@ -16,14 +16,6 @@ namespace ControleBM.Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<ItemVenda>().Property(i => i.PrecoUnitarioMomento).HasPrecision(18, 2);
-
-            modelBuilder.Entity<ItemVenda>().Property(i => i.CustoUnitarioMomento).HasPrecision(18, 2);
-
-            modelBuilder.Entity<Produto>().Property(p => p.PrecoVenda).HasPrecision(18, 2);
-
-            modelBuilder.Entity<Produto>().Property(p => p.PrecoCusto).HasPrecision(18, 2);
         }
     }
 }

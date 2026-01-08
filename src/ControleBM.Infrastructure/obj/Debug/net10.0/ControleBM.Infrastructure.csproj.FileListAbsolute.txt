@@ -16,3 +16,5 @@ C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Infrastructure\obj\D
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Infrastructure\obj\Debug\net10.0\refint\ControleBM.Infrastructure.dll
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Infrastructure\obj\Debug\net10.0\ControleBM.Infrastructure.pdb
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Infrastructure\obj\Debug\net10.0\ref\ControleBM.Infrastructure.dll
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Infrastructure\bin\Debug\net10.0\ControleBM.Infrastructure.runtimeconfig.json
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Infrastructure\obj\Debug\net10.0\ControleBM.Infrastructure.genruntimeconfig.cache

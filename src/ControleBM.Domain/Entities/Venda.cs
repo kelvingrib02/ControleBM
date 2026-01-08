@@ -10,7 +10,7 @@
         public List<ItemVenda> Itens { get; set; } = new();
         public void CalcularTotal()
         {
-            Total = Itens.Sum(i => i.TotalItem);
+            Total = Itens.Sum(i => i.SubTotal);
         }
     }
 }
