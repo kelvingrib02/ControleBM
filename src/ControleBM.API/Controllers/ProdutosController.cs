@@ -25,7 +25,7 @@ namespace ControleBM.Api.Controllers
         [HttpPost]
         public async Task<ActionResult<Produto>> PostProduto(Produto produto)
         {
-            if (produto.PrecoUnitario <= 0)
+            if (produto.CustoUnitario <= 0)
                 return BadRequest("O preço de venda deve ser maior que zero.");
 
             _context.Produtos.Add(produto);
