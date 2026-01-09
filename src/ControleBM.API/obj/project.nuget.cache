@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tcBgmMLg0ls=",
+  "dgSpecHash": "9amQ8opzPVM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Api\\ControleBM.API.csproj",
+  "projectFilePath": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.API\\ControleBM.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\55129\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\55129\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.1\\microsoft.aspnetcore.openapi.10.0.1.nupkg.sha512",
