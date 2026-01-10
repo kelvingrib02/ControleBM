@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ControleBM.Application\ControleBM.Application.csproj" />
     <ProjectReference Include="..\ControleBM.Infrastructure\ControleBM.Infrastructure.csproj" />
+    <ProjectReference Include="..\ControleBM.Shared\ControleBM.Shared.csproj" />
   </ItemGroup>
 
 </Project>
