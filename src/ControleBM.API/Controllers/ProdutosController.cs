@@ -1,5 +1,8 @@
 ﻿using ControleBM.Domain.Entities;
+using ControleBM.Domain.Enums;
 using ControleBM.Infrastructure.Data;
+using ControleBM.Shared.DTOs;
+using ControleBM.Shared.Enums;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,21 +20,52 @@ namespace ControleBM.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Produto>>> GetProdutos()
+        public async Task<ActionResult<List<ProdutoResponseDto>>> GetProdutos()
         {
-            return await _context.Produtos.ToListAsync();
+            var produtos = await _context.Produtos
+                .Select(p => new ProdutoResponseDto
+                {
+                    Id = p.Id,
+                    Nome = p.Nome,
+                    Descricao = p.Descricao,
+                    PrecoVenda = p.PrecoVenda,
+                    PrecoCusto = p.PrecoCusto,
+                    QuantidadeEstoque = p.QuantidadeEstoque,
+                    Tipo = (TipoProduto)p.Tipo
+                })
+                .ToListAsync();
+
+            return Ok(produtos);
         }
 
         [HttpPost]
-        public async Task<ActionResult<Produto>> PostProduto(Produto produto)
+        public async Task<ActionResult<ProdutoResponseDto>> CreateProduto(ProdutoRequestDto request)
         {
-            if (produto.CustoUnitario <= 0)
-                return BadRequest("O preço de venda deve ser maior que zero.");
+            var produto = new Produto
+            {
+                Nome = request.Nome,
+                Descricao = request.Descricao,
+                PrecoVenda = request.PrecoVenda,
+                PrecoCusto = request.PrecoCusto,
+                QuantidadeEstoque = request.QuantidadeEstoque,
+                Tipo = (int)request.Tipo
+            };
 
             _context.Produtos.Add(produto);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetProdutos), new { id = produto.Id }, produto);
+            var response = new ProdutoResponseDto
+            {
+                Id = produto.Id,
+                Nome = produto.Nome,
+                Descricao = produto.Descricao,
+                PrecoVenda = produto.PrecoVenda,
+                PrecoCusto = produto.PrecoCusto,
+                QuantidadeEstoque = produto.QuantidadeEstoque,
+                Tipo = request.Tipo
+            };
+
+            return CreatedAtAction(nameof(GetProdutos), new { id = produto.Id }, response);
         }
     }
 }
