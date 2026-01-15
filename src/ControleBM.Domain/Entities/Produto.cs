@@ -1,4 +1,4 @@
-﻿using ControleBM.Domain.Enums; 
+﻿using ControleBM.Shared.Enums;
 
 namespace ControleBM.Domain.Entities
 {
@@ -15,7 +15,7 @@ namespace ControleBM.Domain.Entities
         {
             if (EstoqueAtual < quantidade)
             {
-                
+                EstoqueAtual += quantidade;
             }
             EstoqueAtual -= quantidade;
         }

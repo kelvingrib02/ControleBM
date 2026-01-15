@@ -1,5 +1,4 @@
 ﻿using ControleBM.Domain.Entities;
-using ControleBM.Domain.Enums;
 using ControleBM.Infrastructure.Data;
 using ControleBM.Shared.DTOs;
 using ControleBM.Shared.Enums;
@@ -25,12 +24,11 @@ namespace ControleBM.Api.Controllers
             var produtos = await _context.Produtos
                 .Select(p => new ProdutoResponseDto
                 {
-                    Id = p.Id,
                     Nome = p.Nome,
                     Descricao = p.Descricao,
                     PrecoVenda = p.PrecoVenda,
-                    PrecoCusto = p.PrecoCusto,
-                    QuantidadeEstoque = p.QuantidadeEstoque,
+                    CustoUnitario = p.CustoUnitario,
+                    EstoqueAtual = p.EstoqueAtual,
                     Tipo = (TipoProduto)p.Tipo
                 })
                 .ToListAsync();
@@ -46,9 +44,9 @@ namespace ControleBM.Api.Controllers
                 Nome = request.Nome,
                 Descricao = request.Descricao,
                 PrecoVenda = request.PrecoVenda,
-                PrecoCusto = request.PrecoCusto,
-                QuantidadeEstoque = request.QuantidadeEstoque,
-                Tipo = (int)request.Tipo
+                CustoUnitario = request.CustoUnitario,
+                EstoqueAtual = request.EstoqueAtual,
+                Tipo = (TipoProduto)request.Tipo,
             };
 
             _context.Produtos.Add(produto);
@@ -56,13 +54,12 @@ namespace ControleBM.Api.Controllers
 
             var response = new ProdutoResponseDto
             {
-                Id = produto.Id,
                 Nome = produto.Nome,
                 Descricao = produto.Descricao,
                 PrecoVenda = produto.PrecoVenda,
-                PrecoCusto = produto.PrecoCusto,
-                QuantidadeEstoque = produto.QuantidadeEstoque,
-                Tipo = request.Tipo
+                CustoUnitario = produto.CustoUnitario,
+                EstoqueAtual = produto.EstoqueAtual,
+                Tipo = (TipoProduto)produto.Tipo,
             };
 
             return CreatedAtAction(nameof(GetProdutos), new { id = produto.Id }, response);

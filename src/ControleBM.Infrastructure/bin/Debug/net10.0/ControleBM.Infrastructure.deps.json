@@ -798,8 +798,19 @@
         }
       },
       "ControleBM.Domain/1.0.0": {
+        "dependencies": {
+          "ControleBM.Shared": "1.0.0"
+        },
         "runtime": {
           "ControleBM.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ControleBM.Shared/1.0.0": {
+        "runtime": {
+          "ControleBM.Shared.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1148,6 +1159,11 @@
       "sha512": ""
     },
     "ControleBM.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ControleBM.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -885,7 +885,11 @@
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Shared\\ControleBM.Shared.csproj": {
+                "projectPath": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Shared\\ControleBM.Shared.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

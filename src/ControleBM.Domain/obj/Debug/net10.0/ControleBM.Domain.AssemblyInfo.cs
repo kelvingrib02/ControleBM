@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ControleBM.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ee8d35a59dd9f121715092bfefb7f7cde91c273")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+686f94333e1c1da3ea350c2e53d832f3572c956e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ControleBM.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ControleBM.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

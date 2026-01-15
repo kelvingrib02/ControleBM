@@ -1,0 +1,12 @@
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Shared\bin\Debug\net10.0\ControleBM.Shared.deps.json
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Shared\bin\Debug\net10.0\ControleBM.Shared.dll
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Shared\bin\Debug\net10.0\ControleBM.Shared.pdb
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Shared\obj\Debug\net10.0\ControleBM.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Shared\obj\Debug\net10.0\ControleBM.Shared.AssemblyInfoInputs.cache
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Shared\obj\Debug\net10.0\ControleBM.Shared.AssemblyInfo.cs
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Shared\obj\Debug\net10.0\ControleBM.Shared.csproj.CoreCompileInputs.cache
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Shared\obj\Debug\net10.0\ControleBM.Shared.sourcelink.json
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Shared\obj\Debug\net10.0\ControleBM.Shared.dll
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Shared\obj\Debug\net10.0\refint\ControleBM.Shared.dll
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Shared\obj\Debug\net10.0\ControleBM.Shared.pdb
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Shared\obj\Debug\net10.0\ref\ControleBM.Shared.dll

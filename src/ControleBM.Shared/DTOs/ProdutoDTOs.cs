@@ -10,8 +10,8 @@ namespace ControleBM.Shared.DTOs
         public string Nome { get; set; } = string.Empty;
         public string Descricao { get; set; } = string.Empty;
         public decimal PrecoVenda { get; set; }
-        public decimal PrecoCusto { get; set; }
-        public int QuantidadeEstoque { get; set; }
+        public decimal CustoUnitario { get; set; }
+        public int EstoqueAtual { get; set; }
         public TipoProduto Tipo { get; set; }
     }
 
@@ -19,16 +19,12 @@ namespace ControleBM.Shared.DTOs
     {
         [Required(ErrorMessage = "O nome é obrigatório")]
         public string Nome { get; set; } = string.Empty;
-
         public string Descricao { get; set; } = string.Empty;
 
         [Range(0.01, double.MaxValue, ErrorMessage = "O preço de venda deve ser maior que zero")]
         public decimal PrecoVenda { get; set; }
-
-        public decimal PrecoCusto { get; set; }
-
-        public int QuantidadeEstoque { get; set; }
-
+        public decimal CustoUnitario { get; set; }
+        public int EstoqueAtual { get; set; }
         public TipoProduto Tipo { get; set; }
     }
 }

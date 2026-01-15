@@ -1,4 +1,4 @@
-﻿namespace ControleBM.Domain.Enums
+﻿namespace ControleBM.Shared.Enums
 {
     public enum TipoProduto
     {

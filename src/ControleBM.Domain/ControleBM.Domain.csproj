@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ControleBM.Shared\ControleBM.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

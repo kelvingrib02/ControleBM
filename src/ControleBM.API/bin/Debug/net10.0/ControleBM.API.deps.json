@@ -10,6 +10,7 @@
         "dependencies": {
           "ControleBM.Application": "1.0.0",
           "ControleBM.Infrastructure": "1.0.0",
+          "ControleBM.Shared": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "10.0.1",
           "Microsoft.EntityFrameworkCore.Design": "10.0.1",
           "Swashbuckle.AspNetCore": "10.1.0"
@@ -677,6 +678,9 @@
         }
       },
       "ControleBM.Domain/1.0.0": {
+        "dependencies": {
+          "ControleBM.Shared": "1.0.0"
+        },
         "runtime": {
           "ControleBM.Domain.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -692,6 +696,14 @@
         },
         "runtime": {
           "ControleBM.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ControleBM.Shared/1.0.0": {
+        "runtime": {
+          "ControleBM.Shared.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -996,6 +1008,11 @@
       "sha512": ""
     },
     "ControleBM.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ControleBM.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

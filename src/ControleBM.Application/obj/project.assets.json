@@ -5,11 +5,24 @@
       "ControleBM.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "ControleBM.Shared": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ControleBM.Domain.dll": {}
         },
         "runtime": {
           "bin/placeholder/ControleBM.Domain.dll": {}
+        }
+      },
+      "ControleBM.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/ControleBM.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ControleBM.Shared.dll": {}
         }
       }
     }
@@ -19,6 +32,11 @@
       "type": "project",
       "path": "../ControleBM.Domain/ControleBM.Domain.csproj",
       "msbuildProject": "../ControleBM.Domain/ControleBM.Domain.csproj"
+    },
+    "ControleBM.Shared/1.0.0": {
+      "type": "project",
+      "path": "../ControleBM.Shared/ControleBM.Shared.csproj",
+      "msbuildProject": "../ControleBM.Shared/ControleBM.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {

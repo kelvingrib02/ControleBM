@@ -1,11 +1,15 @@
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Domain\bin\Debug\net10.0\ControleBM.Domain.deps.json
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Domain\bin\Debug\net10.0\ControleBM.Domain.dll
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Domain\bin\Debug\net10.0\ControleBM.Domain.pdb
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Domain\bin\Debug\net10.0\ControleBM.Shared.dll
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Domain\bin\Debug\net10.0\ControleBM.Shared.pdb
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Domain\obj\Debug\net10.0\ControleBM.Domain.csproj.AssemblyReference.cache
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Domain\obj\Debug\net10.0\ControleBM.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Domain\obj\Debug\net10.0\ControleBM.Domain.AssemblyInfoInputs.cache
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Domain\obj\Debug\net10.0\ControleBM.Domain.AssemblyInfo.cs
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Domain\obj\Debug\net10.0\ControleBM.Domain.csproj.CoreCompileInputs.cache
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Domain\obj\Debug\net10.0\ControleBM.Domain.sourcelink.json
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Domain\obj\Debug\net10.0\Controle.3C0C9A17.Up2Date
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Domain\obj\Debug\net10.0\ControleBM.Domain.dll
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Domain\obj\Debug\net10.0\refint\ControleBM.Domain.dll
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Domain\obj\Debug\net10.0\ControleBM.Domain.pdb
