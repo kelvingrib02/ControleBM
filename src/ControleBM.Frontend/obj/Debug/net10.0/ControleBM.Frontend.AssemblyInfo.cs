@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ControleBM.Frontend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+650f71721101cb7e78f4abc6566d069935ed2360")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5fc719c2fc3c4f2381a56918891a9d5cffb19f63")]
 [assembly: System.Reflection.AssemblyProductAttribute("ControleBM.Frontend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ControleBM.Frontend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
