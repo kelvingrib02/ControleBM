@@ -183,10 +183,9 @@ C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.API\obj\Debug\net10.
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.API\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.API\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.API\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.API\obj\Debug\net10.0\Controle.94033F97.Up2Date
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.API\obj\Debug\net10.0\ControleBM.API.dll
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.API\obj\Debug\net10.0\refint\ControleBM.API.dll
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.API\obj\Debug\net10.0\ControleBM.API.pdb
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.API\obj\Debug\net10.0\ControleBM.API.genruntimeconfig.cache
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.API\obj\Debug\net10.0\ref\ControleBM.API.dll
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Api\obj\Debug\net10.0\Controle.F323E0B7.Up2Date

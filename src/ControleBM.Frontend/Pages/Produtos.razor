@@ -1,0 +1,59 @@
+﻿@page "/produtos"
+@using ControleBM.Shared.DTOs
+@using ControleBM.Shared.Enums
+@inject HttpClient Http
+
+<PageTitle>Estoque do Bar</PageTitle>
+
+<h1>Estoque de Produtos</h1>
+
+<p>Aqui você vê o que tem na geladeira.</p>
+
+@if (produtos == null)
+{
+    <p><em>Carregando o estoque...</em></p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Preço Venda</th>
+                <th>Estoque</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var produto in produtos)
+            {
+                <tr>
+                    <td>@produto.Nome</td>
+                    <td>@produto.Tipo</td>
+                    <td>R$ @produto.PrecoVenda.ToString("F2")</td>
+                    <td>@produto.EstoqueAtual</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm">Editar</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<ProdutoResponseDto>? produtos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            produtos = await Http.GetFromJsonAsync<List<ProdutoResponseDto>>("api/Produtos");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao buscar produtos: {ex.Message}");
+        }
+    }
+}

@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{F0D80505-4849-42DF-AF5D-6F3065FF1BED}|src\\ControleBM.API\\ControleBM.API.csproj|solutionrelative:src\\controlebm.api\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0DD582A-371D-4DD5-96CC-A3C2E1ECCAF6}|src\\ControleBM.Shared\\ControleBM.Shared.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.shared\\dtos\\produtodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0DD582A-371D-4DD5-96CC-A3C2E1ECCAF6}|src\\ControleBM.Shared\\ControleBM.Shared.csproj|solutionrelative:src\\controlebm.shared\\dtos\\produtodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{003B686F-BE02-4E04-8D5B-62E968A80B83}|src\\ControleBM.Domain\\ControleBM.Domain.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.domain\\entities\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{003B686F-BE02-4E04-8D5B-62E968A80B83}|src\\ControleBM.Domain\\ControleBM.Domain.csproj|solutionrelative:src\\controlebm.domain\\entities\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0DD582A-371D-4DD5-96CC-A3C2E1ECCAF6}|src\\ControleBM.Shared\\ControleBM.Shared.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.shared\\dtos\\produtodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0DD582A-371D-4DD5-96CC-A3C2E1ECCAF6}|src\\ControleBM.Shared\\ControleBM.Shared.csproj|solutionrelative:src\\controlebm.shared\\dtos\\produtodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0DD582A-371D-4DD5-96CC-A3C2E1ECCAF6}|src\\ControleBM.Shared\\ControleBM.Shared.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.shared\\enums\\tipoproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -40,27 +40,26 @@
               "RelativeDocumentMoniker": "src\\ControleBM.API\\Controllers\\ProdutosController.cs",
               "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.API\\Controllers\\ProdutosController.cs",
               "RelativeToolTip": "src\\ControleBM.API\\Controllers\\ProdutosController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAWwBsAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAjwDcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-15T01:21:46.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Produto.cs",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Domain\\Entities\\Produto.cs",
               "RelativeDocumentMoniker": "src\\ControleBM.Domain\\Entities\\Produto.cs",
               "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Domain\\Entities\\Produto.cs",
               "RelativeToolTip": "src\\ControleBM.Domain\\Entities\\Produto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAQAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T01:21:48.872Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T01:21:48.872Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ProdutoDTOs.cs",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Shared\\DTOs\\ProdutoDTOs.cs",
               "RelativeDocumentMoniker": "src\\ControleBM.Shared\\DTOs\\ProdutoDTOs.cs",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "src\\ControleBM.Shared\\DTOs\\ProdutoDTOs.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T01:17:35.01Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T01:17:35.01Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "src\\ControleBM.Shared\\Enums\\TipoProduto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-10T19:50:00.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-10T19:50:00.343Z"
             }
           ]
         }

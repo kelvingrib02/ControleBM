@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "ControleBM.Frontend",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-BJPEj2Ovrlx+Shc2aGveqQ5bEB/O8lc8Kn5bp/TM/TA=",
+    "hash": "sha256-joSX9iJr8ZVqDp8Oesh6P96jdpP2YoIERg9iDkC3dr0=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.cs8mcre4gh.js"
@@ -146,6 +146,11 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
         "virtualPath": "Microsoft.Extensions.FileSystemGlobbing.wasm",
         "name": "Microsoft.Extensions.FileSystemGlobbing.g3xufhx1sx.wasm",
         "integrity": "sha256-9FlVI/W1fgfL7qCMlPbVuhn2T8pPvMW+ddjTZtajgXo="
+      },
+      {
+        "virtualPath": "Microsoft.Extensions.Http.wasm",
+        "name": "Microsoft.Extensions.Http.rh0d9ghlgt.wasm",
+        "integrity": "sha256-QYO2XULBYCKbIQkp1AE5tjJ48mQPtq7kGon3fGwJhPo="
       },
       {
         "virtualPath": "Microsoft.Extensions.Logging.wasm",
@@ -1039,25 +1044,25 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "ControleBM.Shared.wasm",
-        "name": "ControleBM.Shared.ht9essuvf5.wasm",
-        "integrity": "sha256-NVVi1J01i+Ids0d0c1lXmWyDtaeowDEbE/KURY1pQzY="
+        "name": "ControleBM.Shared.qnxj0oghx9.wasm",
+        "integrity": "sha256-JtGluDrLwXUORZNWjOufokmEDKhrJE5bDC7AvFmrGEw="
       },
       {
         "virtualPath": "ControleBM.Frontend.wasm",
-        "name": "ControleBM.Frontend.8fv8rxyxf8.wasm",
-        "integrity": "sha256-FNAen3R1ZRglMQ3zae4MQde4o2+EBsUEldjcmotafLk="
+        "name": "ControleBM.Frontend.0e9ufnw60d.wasm",
+        "integrity": "sha256-+MkZ6KKI646997BQi7HhzJ51bYB80xCWzlWzEjMMc7M="
       }
     ],
     "pdb": [
       {
         "virtualPath": "ControleBM.Shared.pdb",
-        "name": "ControleBM.Shared.mipsod4b8n.pdb",
-        "integrity": "sha256-LtyCU34GmPsxFY1rxpA0Z5rMDKw9tQ7kBpJ0GM+9sCk="
+        "name": "ControleBM.Shared.r74ygfn85r.pdb",
+        "integrity": "sha256-KZrwpqZOtWCsf85r7p/YvIOSiPcY0g1Z4LQywgbeDEk="
       },
       {
         "virtualPath": "ControleBM.Frontend.pdb",
-        "name": "ControleBM.Frontend.iink4fcum4.pdb",
-        "integrity": "sha256-ChQbXxr3Kc1w5fySQL5qufgoHZq1JugBbScTIlHCGOA="
+        "name": "ControleBM.Frontend.r54gawwdqy.pdb",
+        "integrity": "sha256-D4NN8GGzBtVoi5/NadkWjxZhi9XsFy47SiQNhTtDwiU="
       }
     ],
     "libraryInitializers": [

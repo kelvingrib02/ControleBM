@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "ControleBM.API/1.0.0": {
+      "ControleBM.Api/1.0.0": {
         "dependencies": {
           "ControleBM.Application": "1.0.0",
           "ControleBM.Infrastructure": "1.0.0",
@@ -16,7 +16,7 @@
           "Swashbuckle.AspNetCore": "10.1.0"
         },
         "runtime": {
-          "ControleBM.API.dll": {}
+          "ControleBM.Api.dll": {}
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -712,7 +712,7 @@
     }
   },
   "libraries": {
-    "ControleBM.API/1.0.0": {
+    "ControleBM.Api/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
