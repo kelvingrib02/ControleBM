@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("ControleBM.Api")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("ControleBM.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+650f71721101cb7e78f4abc6566d069935ed2360")]
-[assembly: System.Reflection.AssemblyProductAttribute("ControleBM.Api")]
-[assembly: System.Reflection.AssemblyTitleAttribute("ControleBM.Api")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ac1ec3cb0a4490ebdfbb7d509e29c4eb5da359a")]
+[assembly: System.Reflection.AssemblyProductAttribute("ControleBM.API")]
+[assembly: System.Reflection.AssemblyTitleAttribute("ControleBM.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.

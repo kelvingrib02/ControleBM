@@ -32,20 +32,20 @@ else
                 <tr>
                     <td>@item.Nome</td>
                     <td>@item.Tipo</td>
-                    <td>@item.CustoUnitario.ToString("N2")</td>
+                    <td>@item.PrecoCusto.ToString("N2")</td>
                     <td>@item.PrecoVenda.ToString("N2")</td>
                     <td>
-                        @if (item.EstoqueAtual < 5)
+                        @if (item.QuantidadeEstoque < 5)
                         {
-                            <span class="badge bg-danger">@item.EstoqueAtual (Baixo)</span>
+                            <span class="badge bg-danger">@item.QuantidadeEstoque (Baixo)</span>
                         }
                         else
                         {
-                            <span class="badge bg-success">@item.EstoqueAtual</span>
+                            <span class="badge bg-success">@item.QuantidadeEstoque</span>
                         }
                     </td>
                     <td class="text-success fw-bold">
-                        @((item.PrecoVenda - item.CustoUnitario).ToString("N2"))
+                        @((item.PrecoVenda - item.PrecoCusto).ToString("N2"))
                     </td>
                 </tr>
             }
@@ -58,6 +58,13 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        produtos = await ProdutoService.GetProdutosAsync();
+        try
+        {
+            produtos = await ProdutoService.GetProdutosAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao carregar produtos: {ex.Message}");
+        }
     }
 }

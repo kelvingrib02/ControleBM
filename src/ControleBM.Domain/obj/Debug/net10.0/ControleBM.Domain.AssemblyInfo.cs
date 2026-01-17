@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ControleBM.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+650f71721101cb7e78f4abc6566d069935ed2360")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ac1ec3cb0a4490ebdfbb7d509e29c4eb5da359a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ControleBM.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ControleBM.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
