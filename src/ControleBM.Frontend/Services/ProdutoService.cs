@@ -17,5 +17,10 @@ namespace ControleBM.Frontend.Services
             var resultado = await _http.GetFromJsonAsync<List<ProdutoResponseDto>>("api/produtos");
             return resultado ?? new List<ProdutoResponseDto>();
         }
+
+        public async Task CreateProdutoAsync(ProdutoRequestDto produto)
+        {
+            await _http.PostAsJsonAsync("api/produtos", produto);
+        }
     }
 }
