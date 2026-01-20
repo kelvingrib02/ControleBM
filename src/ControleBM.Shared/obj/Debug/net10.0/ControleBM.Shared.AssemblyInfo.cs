@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ControleBM.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ac1ec3cb0a4490ebdfbb7d509e29c4eb5da359a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e08dc4f82264d5fa439af11cc5603bf3fb63576f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ControleBM.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ControleBM.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
