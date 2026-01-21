@@ -2,7 +2,7 @@
 {
     public class Cliente : Entity
     {
-        public string Nome { get; set; }
+        public required string Nome { get; set; }
         public string? Telefone { get; set; }
         public decimal SaldoDevedor { get; private set; }
         public void AdicionarDivida(decimal valor)

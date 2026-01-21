@@ -4,7 +4,7 @@ namespace ControleBM.Domain.Entities
 {
     public class Produto : Entity
     {
-        public string Nome { get; set; }
+        public required string Nome { get; set; }
         public string? Descricao { get; set; }
         public decimal PrecoVenda { get; set; }
         public decimal CustoUnitario { get; set; }

@@ -21,7 +21,9 @@ namespace ControleBM.Api.Controllers
         [HttpGet]
         public async Task<ActionResult<List<ProdutoResponseDto>>> GetProdutos()
         {
-            var produtos = await _context.Produtos.Where(p => p.Ativo).Select(p => new ProdutoResponseDto
+            var produtos = await _context.Produtos
+                .Where(p => p.Ativo)
+                .Select(p => new ProdutoResponseDto
                 {
                     Id = p.Id,
                     Nome = p.Nome,
@@ -39,7 +41,9 @@ namespace ControleBM.Api.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ProdutoResponseDto>> GetProdutoById(Guid id)
         {
-            var produto = await _context.Produtos.Where(p => p.Id == id && p.Ativo).Select(p => new ProdutoResponseDto
+            var produto = await _context.Produtos
+                .Where(p => p.Id == id && p.Ativo)
+                .Select(p => new ProdutoResponseDto
                 {
                     Id = p.Id,
                     Nome = p.Nome,
@@ -68,6 +72,7 @@ namespace ControleBM.Api.Controllers
                 CustoUnitario = request.CustoUnitario,
                 EstoqueAtual = request.EstoqueAtual,
                 Tipo = request.Tipo,
+                Ativo = true
             };
 
             _context.Produtos.Add(produto);
@@ -75,6 +80,7 @@ namespace ControleBM.Api.Controllers
 
             var response = new ProdutoResponseDto
             {
+                Id = produto.Id,
                 Nome = produto.Nome,
                 Descricao = produto.Descricao,
                 PrecoVenda = produto.PrecoVenda,
@@ -83,7 +89,7 @@ namespace ControleBM.Api.Controllers
                 Tipo = produto.Tipo,
             };
 
-            return CreatedAtAction(nameof(GetProdutos), new { id = produto.Id }, response);
+            return CreatedAtAction(nameof(GetProdutoById), new { id = produto.Id }, response);
         }
 
         [HttpPut("{id}")]
@@ -94,7 +100,7 @@ namespace ControleBM.Api.Controllers
 
             var produto = await _context.Produtos.FindAsync(id);
 
-            if (produto == null)
+            if (produto == null || !produto.Ativo)
                 return NotFound(new { message = "Produto não encontrado" });
 
             produto.Nome = dto.Nome;

@@ -7,10 +7,11 @@ namespace ControleBM.Frontend.Services
     {
         Task<List<ProdutoResponseDto>> GetProdutosAsync();
         Task<ProdutoResponseDto?> GetProdutoByIdAsync(Guid id);
-        Task AddProdutoAsync(ProdutoRequestDto produto);
+        Task CreateProdutoAsync(ProdutoRequestDto produto);
         Task UpdateProdutoAsync(Guid id, ProdutoRequestDto produto);
         Task DeleteProdutoAsync(Guid id);
     }
+
     public class ProdutoService : IProdutoService
     {
         private readonly HttpClient _http;
@@ -31,9 +32,10 @@ namespace ControleBM.Frontend.Services
             return await _http.GetFromJsonAsync<ProdutoResponseDto>($"api/produtos/{id}");
         }
 
-        public async Task AddProdutoAsync(ProdutoRequestDto produto)
+        public async Task CreateProdutoAsync(ProdutoRequestDto produto)
         {
-            await _http.PostAsJsonAsync("api/produtos", produto);
+            var response = await _http.PostAsJsonAsync("api/produtos", produto);
+            response.EnsureSuccessStatusCode();
         }
 
         public async Task UpdateProdutoAsync(Guid id, ProdutoRequestDto produto)
