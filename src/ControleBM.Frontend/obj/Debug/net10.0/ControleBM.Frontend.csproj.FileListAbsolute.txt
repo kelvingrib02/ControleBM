@@ -1,8 +1,4 @@
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\ControleBM.Frontend.runtimeconfig.json
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\ControleBM.Frontend.kqtjihn6vn.pdb
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\ControleBM.Frontend.lpzyqz5gnf.wasm
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\ControleBM.Shared.biguixrnsi.wasm
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\ControleBM.Shared.bjkydlevpx.pdb
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.mrojqw2yhh.wasm
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Components.5yorhp2rya.wasm
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.xm4iwpaol4.wasm
@@ -202,7 +198,6 @@ C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\n
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.au65xu8d95.wasm
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\WindowsBase.mi3hkxthj8.wasm
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\blazor.webassembly.66stpp682q.js
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\dotnet.5zvjttvx7a.js
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\dotnet.js.map
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\dotnet.native.cs8mcre4gh.js
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\dotnet.native.muve7a13r4.wasm
@@ -227,7 +222,6 @@ C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\n
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Diagnostics.Tools.f5hnfusd9n.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.ServiceProcess.x10kdcthsy.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Windows.axtn86mzz6.wasm.gz
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\ControleBM.Shared.biguixrnsi.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\WindowsBase.mi3hkxthj8.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Net.Requests.dd8um1v0v4.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.ObjectModel.qra8ipv6cl.wasm.gz
@@ -268,7 +262,6 @@ C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\n
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Threading.ThreadPool.szctd5y8bn.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Runtime.InteropServices.0us88a4qml.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Xml.Linq.j4b5ce3025.wasm.gz
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\ControleBM.Frontend.kqtjihn6vn.pdb.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.IO.Pipes.AccessControl.orawgey7bd.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Transactions.Local.nufsb5pyrr.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Security.l9hsxb0sdk.wasm.gz
@@ -380,7 +373,6 @@ C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\n
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Threading.AccessControl.0jx6t23d4a.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Net.Security.j01yc12epg.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Collections.NonGeneric.8znze2bng9.wasm.gz
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\ControleBM.Shared.bjkydlevpx.pdb.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Runtime.InteropServices.RuntimeInformation.nvwt5l6jkw.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.IO.kdm5se4z4i.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\dotnet.native.muve7a13r4.wasm.gz
@@ -414,7 +406,6 @@ C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\n
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Security.Cryptography.Csp.hhoaoktf3s.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\mscorlib.uifnjyorgo.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat.gz
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\ControleBM.Frontend.lpzyqz5gnf.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.mrojqw2yhh.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Console.5bpbf67g8o.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Private.CoreLib.zjh2w4p93l.wasm.gz
@@ -426,7 +417,6 @@ C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\n
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Diagnostics.Contracts.yj802auekg.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Net.Http.Json.f5ti54ia1a.wasm.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\System.Numerics.Vectors.tjoypuu8wa.wasm.gz
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\dotnet.5zvjttvx7a.js.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\ControleBM.Frontend.staticwebassets.runtime.json
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\ControleBM.Frontend.staticwebassets.endpoints.json
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\ControleBM.Frontend.dll
@@ -1123,12 +1113,6 @@ C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\n
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\compressed\xdvhurnih3-{0}-tjcz0u77k5-tjcz0u77k5.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\compressed\mx7xrzdr3z-{0}-tptq2av103-tptq2av103.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\compressed\w69yluq81d-{0}-lfu7j35m59-lfu7j35m59.gz
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\compressed\30yrx3kk0s-{0}-biguixrnsi-biguixrnsi.gz
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\compressed\rly1fvph87-{0}-bjkydlevpx-bjkydlevpx.gz
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\compressed\xmbov2uqet-{0}-lpzyqz5gnf-lpzyqz5gnf.gz
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\compressed\9mk408y9fl-{0}-kqtjihn6vn-kqtjihn6vn.gz
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\compressed\zz95o7eprt-{0}-5zvjttvx7a-5zvjttvx7a.gz
-C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\compressed\91kxws9olo-{0}-nzrviieyno-nzrviieyno.gz
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\staticwebassets.development.json
@@ -1139,3 +1123,19 @@ C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\n
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\refint\ControleBM.Frontend.dll
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\ControleBM.Frontend.pdb
 C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\ref\ControleBM.Frontend.dll
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\ControleBM.Frontend.htnm15iijc.wasm
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\ControleBM.Frontend.r4858wqqhv.pdb
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\ControleBM.Shared.mcwskc3p34.wasm
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\ControleBM.Shared.rky4nm2waq.pdb
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\dotnet.jtxj8ygxq0.js
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\ControleBM.Shared.mcwskc3p34.wasm.gz
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\ControleBM.Frontend.r4858wqqhv.pdb.gz
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\ControleBM.Shared.rky4nm2waq.pdb.gz
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\ControleBM.Frontend.htnm15iijc.wasm.gz
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\bin\Debug\net10.0\wwwroot\_framework\dotnet.jtxj8ygxq0.js.gz
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\compressed\30yrx3kk0s-{0}-mcwskc3p34-mcwskc3p34.gz
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\compressed\rly1fvph87-{0}-rky4nm2waq-rky4nm2waq.gz
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\compressed\xmbov2uqet-{0}-htnm15iijc-htnm15iijc.gz
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\compressed\9mk408y9fl-{0}-r4858wqqhv-r4858wqqhv.gz
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\compressed\zz95o7eprt-{0}-jtxj8ygxq0-jtxj8ygxq0.gz
+C:\Users\55129\Documents\Projetos\ControleBM\src\ControleBM.Frontend\obj\Debug\net10.0\compressed\91kxws9olo-{0}-h0slmf1qfe-h0slmf1qfe.gz

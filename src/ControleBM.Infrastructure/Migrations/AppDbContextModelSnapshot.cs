@@ -24,11 +24,12 @@ namespace ControleBM.Infrastructure.Migrations
 
             modelBuilder.Entity("ControleBM.Domain.Entities.Cliente", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("uuid");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Nome")
                         .IsRequired()
@@ -47,11 +48,12 @@ namespace ControleBM.Infrastructure.Migrations
 
             modelBuilder.Entity("ControleBM.Domain.Entities.ItemVenda", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("uuid");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<decimal>("CustoUnitarioNoMomento")
                         .HasColumnType("numeric");
@@ -62,37 +64,32 @@ namespace ControleBM.Infrastructure.Migrations
                     b.Property<Guid>("ProdutoId")
                         .HasColumnType("uuid");
 
-                    b.Property<int>("ProdutoId1")
-                        .HasColumnType("integer");
-
                     b.Property<int>("Quantidade")
                         .HasColumnType("integer");
 
                     b.Property<Guid>("VendaId")
                         .HasColumnType("uuid");
 
-                    b.Property<int>("VendaId1")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("ProdutoId1");
+                    b.HasIndex("ProdutoId");
 
-                    b.HasIndex("VendaId1");
+                    b.HasIndex("VendaId");
 
                     b.ToTable("ItensVenda");
                 });
 
             modelBuilder.Entity("ControleBM.Domain.Entities.Produto", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                        .HasColumnType("uuid");
 
                     b.Property<bool>("Ativo")
                         .HasColumnType("boolean");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<decimal>("CustoUnitario")
                         .HasColumnType("numeric");
@@ -120,14 +117,15 @@ namespace ControleBM.Infrastructure.Migrations
 
             modelBuilder.Entity("ControleBM.Domain.Entities.Venda", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("uuid");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    b.Property<Guid>("ClienteId")
+                        .HasColumnType("uuid");
 
-                    b.Property<int?>("ClienteId")
-                        .HasColumnType("integer");
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<DateTime>("DataVenda")
                         .HasColumnType("timestamp with time zone");
@@ -149,13 +147,13 @@ namespace ControleBM.Infrastructure.Migrations
                 {
                     b.HasOne("ControleBM.Domain.Entities.Produto", "Produto")
                         .WithMany()
-                        .HasForeignKey("ProdutoId1")
+                        .HasForeignKey("ProdutoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ControleBM.Domain.Entities.Venda", "Venda")
                         .WithMany("Itens")
-                        .HasForeignKey("VendaId1")
+                        .HasForeignKey("VendaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -168,7 +166,9 @@ namespace ControleBM.Infrastructure.Migrations
                 {
                     b.HasOne("ControleBM.Domain.Entities.Cliente", "Cliente")
                         .WithMany()
-                        .HasForeignKey("ClienteId");
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Cliente");
                 });

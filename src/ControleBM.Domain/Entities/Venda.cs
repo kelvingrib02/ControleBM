@@ -4,7 +4,7 @@
     {
         public DateTime DataVenda { get; set; }
         public decimal Total { get; set; }
-        public int? ClienteId { get; set; }
+        public Guid ClienteId { get; set; }
         public Cliente? Cliente { get; set; }
         public bool Fiado { get; set; }
         public List<ItemVenda> Itens { get; set; } = new();

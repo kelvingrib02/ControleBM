@@ -31,7 +31,7 @@ namespace ControleBM.Api.Controllers
                     PrecoVenda = p.PrecoVenda,
                     CustoUnitario = p.CustoUnitario,
                     EstoqueAtual = p.EstoqueAtual,
-                    Tipo = p.Tipo
+                    Tipo = (TipoProduto)p.Tipo
                 })
                 .ToListAsync();
 
@@ -51,7 +51,7 @@ namespace ControleBM.Api.Controllers
                     PrecoVenda = p.PrecoVenda,
                     CustoUnitario = p.CustoUnitario,
                     EstoqueAtual = p.EstoqueAtual,
-                    Tipo = p.Tipo
+                    Tipo = (TipoProduto)p.Tipo
                 })
                 .FirstOrDefaultAsync();
 
