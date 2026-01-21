@@ -1,75 +1,55 @@
 ﻿@page "/produtos"
 @using ControleBM.Shared.DTOs
+@using ControleBM.Shared.Enums
 @using ControleBM.Frontend.Services
 @inject IProdutoService ProdutoService
 @inject NavigationManager Navigation
+@inject IJSRuntime JSRuntime
 
-<PageTitle>Estoque do Bar</PageTitle>
+<h3>Lista de Produtos</h3>
 
-<div class="d-flex justify-content-between align-items-center mb-3">
-    <h1>Estoque de Produtos</h1>
-    <button class="btn btn-primary" @onclick="IrParaCadastro">
-        Novo Produto
-    </button>
+<div class="mb-3">
+    <button class="btn btn-success" @onclick="NovoProduto">➕ Novo Produto</button>
 </div>
-
-<p>Gerencie aqui o estoque do bar.</p>
 
 @if (produtos == null)
 {
-    <div class="d-flex justify-content-center">
-        <div class="spinner-border" role="status">
-            <span class="visually-hidden">Carregando...</span>
-        </div>
-    </div>
-}
-else if (!produtos.Any())
-{
-    <div class="alert alert-info">
-        Nenhum produto cadastrado ainda. Clique em "Novo Produto" para começar!
-    </div>
+    <p><em>Carregando...</em></p>
 }
 else
 {
-    <table class="table table-striped table-hover">
-        <thead class="table-dark">
+    <table class="table table-striped">
+        <thead>
             <tr>
                 <th>Nome</th>
                 <th>Tipo</th>
+                <th>Preço Venda</th>
                 <th>Custo</th>
-                <th>Venda</th>
+                <th>Lucro Unit.</th>
                 <th>Estoque</th>
-                <th>Lucro</th>
-                <th class="text-center">Ações</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in produtos)
+            @foreach (var produto in produtos)
             {
                 <tr>
-                    <td>@item.Nome</td>
-                    <td>@item.Tipo</td>
-                    <td>@item.CustoUnitario.ToString("C2")</td>
-                    <td>@item.PrecoVenda.ToString("C2")</td>
+                    <td>@produto.Nome</td>
+                    <td>@produto.Tipo</td>
+                    <td>R$ @produto.PrecoVenda.ToString("N2")</td>
+                    <td>R$ @produto.CustoUnitario.ToString("N2")</td>
+                    <td>R$ @((produto.PrecoVenda - produto.CustoUnitario).ToString("N2"))</td>
                     <td>
-                        @if (item.EstoqueAtual < 5)
-                        {
-                            <span class="badge bg-danger">@item.EstoqueAtual (Baixo)</span>
-                        }
-                        else
-                        {
-                            <span class="badge bg-success">@item.EstoqueAtual</span>
-                        }
+                        <span class="badge @GetEstoqueBadge(produto.EstoqueAtual)">
+                            @produto.EstoqueAtual
+                        </span>
                     </td>
-                    <td class="text-success fw-bold">
-                        @((item.PrecoVenda - item.CustoUnitario).ToString("C2"))
-                    </td>
-                    <td class="text-center">
-                        <button class="btn btn-sm btn-outline-warning me-1" title="Editar">
-                            ✏️
+                    <td>
+                        <button class="btn btn-sm btn-primary" @onclick="() => Editar(produto.Id)">
+                            ✏️ Editar
                         </button>
-                        <button class="btn btn-sm btn-outline-danger" title="Excluir">
-                            🗑️
+                        <button class="btn btn-sm btn-danger" @onclick="() => Excluir(produto.Id)">
+                            🗑️ Excluir
                         </button>
                     </td>
                 </tr>
@@ -88,18 +68,35 @@ else
 
     private async Task CarregarProdutos()
     {
-        try
+        produtos = await ProdutoService.GetProdutosAsync();
+    }
+
+    private void NovoProduto()
+    {
+        Navigation.NavigateTo("/produtos/novo");
+    }
+
+    private void Editar(Guid id)
+    {
+        Navigation.NavigateTo($"/produtos/editar/{id}");
+    }
+
+    private async Task Excluir(Guid id)
+    {
+        if (await JSRuntime.InvokeAsync<bool>("confirm", "Deseja realmente excluir este produto?"))
         {
-            produtos = await ProdutoService.GetProdutosAsync();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Erro ao carregar produtos: {ex.Message}");
+            await ProdutoService.DeleteProdutoAsync(id);
+            await CarregarProdutos();
         }
     }
 
-    private void IrParaCadastro()
+    private string GetEstoqueBadge(int estoque)
     {
-        Navigation.NavigateTo("/produtos/cadastro");
+        return estoque switch
+        {
+            <= 5 => "bg-danger",
+            <= 20 => "bg-warning",
+            _ => "bg-success"
+        };
     }
 }
