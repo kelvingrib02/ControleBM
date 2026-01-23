@@ -7,80 +7,64 @@
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 1000; /* Garante que fique acima do conteúdo */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .sidebar-header[b-9iheb9pafi] {
     padding: 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .logo[b-9iheb9pafi] {
     color: #fff;
     font-size: 1.4rem;
     font-weight: 700;
-    white-space: nowrap;
 }
 
 .sidebar-nav[b-9iheb9pafi] {
     flex: 1;
     padding: 1rem 0;
     overflow-y: auto;
-    display: flex; /* Garante fluxo vertical */
-    flex-direction: column;
 }
 
 .nav-section[b-9iheb9pafi] {
     color: #6c7293;
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
-    padding: 1.5rem 1.5rem 0.5rem;
+    letter-spacing: 1px;
+    padding: 1rem 1.5rem 0.5rem;
 }
 
-/* Renomeado para menu-item e reforçado o estilo */
-.menu-item[b-9iheb9pafi] {
+.nav-item[b-9iheb9pafi] {
     display: flex;
     align-items: center;
-    padding: 0.85rem 1.5rem;
-    color: #a2a3b7 !important; /* !important para vencer o azul padrão */
-    text-decoration: none !important; /* Remove o sublinhado */
+    padding: 0.75rem 1.5rem;
+    color: #a2a3b7;
+    text-decoration: none;
     transition: all 0.3s ease;
     border-left: 3px solid transparent;
-    cursor: pointer;
-    font-size: 0.95rem;
 }
 
-    .menu-item:hover[b-9iheb9pafi] {
-        background: rgba(255, 255, 255, 0.05);
-        color: #fff !important;
+    .nav-item:hover[b-9iheb9pafi] {
+        background: rgba(255,255,255,0.05);
+        color: #fff;
     }
 
-    /* O Blazor adiciona a classe 'active' automaticamente no NavLink */
-    .menu-item.active[b-9iheb9pafi] {
-        background: rgba(99, 102, 241, 0.15);
-        color: #818cf8 !important;
+    .nav-item.active[b-9iheb9pafi] {
+        background: rgba(99, 102, 241, 0.2);
+        color: #818cf8;
         border-left-color: #818cf8;
     }
 
-    .menu-item .icon[b-9iheb9pafi] {
-        font-size: 1.2rem;
-        margin-right: 1rem;
+    .nav-item .icon[b-9iheb9pafi] {
+        font-size: 1.1rem;
+        margin-right: 0.75rem;
         font-style: normal;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 24px; /* Garante alinhamento dos ícones */
     }
 
 .sidebar-footer[b-9iheb9pafi] {
     padding: 1rem 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255,255,255,0.1);
     color: #6c7293;
     font-size: 0.8rem;
-    text-align: center;
 }

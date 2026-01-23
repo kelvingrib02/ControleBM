@@ -1,23 +1,65 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="app-container">
-    <NavMenu />
+<div class="page-layout d-flex">
 
-    <main class="main-content">
-        <header class="top-header">
-            <h1 class="page-title">@PageTitle</h1>
-            <div class="header-actions">
-                <span class="date">@DateTime.Now.ToString("dd/MM/yyyy")</span>
-                <span class="user">👤 Usuário</span>
-            </div>
-        </header>
+    <div class="sidebar-wrapper d-none d-md-block">
+        <NavMenu />
+    </div>
 
-        <div class="content-area">
+    <main class="content-wrapper flex-grow-1">
+        <div class="d-md-none p-3 d-flex justify-content-between align-items-center bg-dark-header">
+            <span class="fw-bold text-white">KS Scheduler</span>
+            <button class="btn btn-sm btn-outline-success">☰</button>
+        </div>
+
+        <div class="p-4 fade-in">
             @Body
         </div>
     </main>
 </div>
 
-@code {
-    private string PageTitle = "Dashboard";
-}
+<style>
+    :root {
+        --bg-dark: #0f172a;
+    }
+
+    body, html, .page-layout {
+        background-color: var(--bg-dark) !important;
+        color: white;
+        min-height: 100vh;
+    }
+
+    .sidebar-wrapper {
+        width: 260px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .content-wrapper {
+        background-color: var(--bg-dark);
+        overflow-y: auto;
+        height: 100vh;
+    }
+
+    .bg-dark-header {
+        background-color: #1e293b;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
