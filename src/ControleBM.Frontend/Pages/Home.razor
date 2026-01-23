@@ -1,7 +1,109 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<div class="dashboard">
+    <!-- Cards de Resumo -->
+    <div class="cards-grid">
+        <div class="card card-primary">
+            <div class="card-icon">💰</div>
+            <div class="card-info">
+                <span class="card-value">R$ 45.230,00</span>
+                <span class="card-label">Receita do Mês</span>
+            </div>
+        </div>
 
-<h1>Hello, world!</h1>
+        <div class="card card-success">
+            <div class="card-icon">📦</div>
+            <div class="card-info">
+                <span class="card-value">@totalProdutos</span>
+                <span class="card-label">Produtos Cadastrados</span>
+            </div>
+        </div>
 
-Welcome to your new app.
+        <div class="card card-warning">
+            <div class="card-icon">👥</div>
+            <div class="card-info">
+                <span class="card-value">@totalClientes</span>
+                <span class="card-label">Clientes Ativos</span>
+            </div>
+        </div>
+
+        <div class="card card-danger">
+            <div class="card-icon">📉</div>
+            <div class="card-info">
+                <span class="card-value">R$ 12.450,00</span>
+                <span class="card-label">Despesas do Mês</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção de Conteúdo -->
+    <div class="content-grid">
+        <!-- Últimas Vendas -->
+        <div class="panel">
+            <div class="panel-header">
+                <h3>Últimas Vendas</h3>
+                <a href="vendas" class="btn-link">Ver todas</a>
+            </div>
+            <div class="panel-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Produto</th>
+                            <th>Valor</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>João Silva</td>
+                            <td>Produto A</td>
+                            <td>R$ 150,00</td>
+                            <td>22/01/2026</td>
+                        </tr>
+                        <tr>
+                            <td>Maria Santos</td>
+                            <td>Produto B</td>
+                            <td>R$ 320,00</td>
+                            <td>21/01/2026</td>
+                        </tr>
+                        <tr>
+                            <td>Pedro Costa</td>
+                            <td>Produto C</td>
+                            <td>R$ 89,90</td>
+                            <td>21/01/2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Produtos com Estoque Baixo -->
+        <div class="panel">
+            <div class="panel-header">
+                <h3>⚠️ Estoque Baixo</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="alert-list">
+                    <li class="alert-item">
+                        <span class="item-name">Produto X</span>
+                        <span class="item-qty danger">3 unid.</span>
+                    </li>
+                    <li class="alert-item">
+                        <span class="item-name">Produto Y</span>
+                        <span class="item-qty warning">8 unid.</span>
+                    </li>
+                    <li class="alert-item">
+                        <span class="item-name">Produto Z</span>
+                        <span class="item-qty warning">10 unid.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private int totalProdutos = 156;
+    private int totalClientes = 89;
+}

@@ -1,0 +1,132 @@
+﻿.page-container {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+    .page-header h2 {
+        margin: 0;
+        color: #1a1a2e;
+    }
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: #818cf8;
+    color: #fff;
+}
+
+    .btn-primary:hover {
+        background: #6366f1;
+    }
+
+.filters-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-search,
+.input-select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-search {
+    flex: 1;
+    max-width: 300px;
+}
+
+    .input-search:focus,
+    .input-select:focus {
+        border-color: #818cf8;
+    }
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .data-table th,
+    .data-table td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .data-table th {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        color: #6c7293;
+        font-weight: 600;
+        background: #fafafa;
+    }
+
+    .data-table tbody tr:hover {
+        background: #f8f9ff;
+    }
+
+.code {
+    color: #6c7293;
+    font-family: monospace;
+}
+
+.stock.low {
+    color: #ef4444;
+    font-weight: 600;
+}
+
+.badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge-success {
+    background: rgba(34, 197, 94, 0.15);
+    color: #16a34a;
+}
+
+.badge-danger {
+    background: rgba(239, 68, 68, 0.15);
+    color: #dc2626;
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+    .btn-icon:hover {
+        background: #f0f0f0;
+    }

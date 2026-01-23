@@ -1,0 +1,91 @@
+﻿@page "/produtos"
+@inject NavigationManager Navigation
+
+<div class="page-container">
+    <div class="page-header">
+        <h2>Produtos</h2>
+        <button class="btn btn-primary" @onclick="NovoProduto">
+            + Novo Produto
+        </button>
+    </div>
+
+    <div class="filters-bar">
+        <input type="text" class="input-search" placeholder="Buscar produto..." @bind="searchTerm" @bind:event="oninput" />
+        <select class="input-select" @bind="filtroCategoria">
+            <option value="">Todas categorias</option>
+            <option value="eletronicos">Eletrônicos</option>
+            <option value="roupas">Roupas</option>
+            <option value="alimentos">Alimentos</option>
+        </select>
+    </div>
+
+    <div class="table-container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var produto in produtos)
+                {
+                    <tr>
+                        <td><span class="code">#@produto.Id</span></td>
+                        <td>@produto.Nome</td>
+                        <td>@produto.Categoria</td>
+                        <td>R$ @produto.Preco.ToString("N2")</td>
+                        <td>
+                            <span class="stock @(produto.Estoque < 10 ? "low" : "")">
+                                @produto.Estoque unid.
+                            </span>
+                        </td>
+                        <td>
+                            <span class="badge @(produto.Ativo ? "badge-success" : "badge-danger")">
+                                @(produto.Ativo ? "Ativo" : "Inativo")
+                            </span>
+                        </td>
+                        <td>
+                            <div class="actions">
+                                <button class="btn-icon" title="Editar" @onclick="() => Editar(produto.Id)">✏️</button>
+                                <button class="btn-icon" title="Excluir" @onclick="() => Excluir(produto.Id)">🗑️</button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@code {
+    private string searchTerm = "";
+    private string filtroCategoria = "";
+
+    private List<Produto> produtos = new()
+    {
+        new Produto { Id = 1, Nome = "Notebook Dell", Categoria = "Eletrônicos", Preco = 3500.00m, Estoque = 15, Ativo = true },
+        new Produto { Id = 2, Nome = "Mouse Gamer", Categoria = "Eletrônicos", Preco = 150.00m, Estoque = 5, Ativo = true },
+        new Produto { Id = 3, Nome = "Camiseta Básica", Categoria = "Roupas", Preco = 49.90m, Estoque = 100, Ativo = true },
+        new Produto { Id = 4, Nome = "Teclado Mecânico", Categoria = "Eletrônicos", Preco = 450.00m, Estoque = 8, Ativo = false },
+    };
+
+    private void NovoProduto() => Navigation.NavigateTo("/produtos/cadastro");
+    private void Editar(int id) => Navigation.NavigateTo($"/produtos/editar/{id}");
+    private void Excluir(int id) { /* implementar modal de confirmação */ }
+
+    public class Produto
+    {
+        public int Id { get; set; }
+        public string Nome { get; set; } = "";
+        public string Categoria { get; set; } = "";
+        public decimal Preco { get; set; }
+        public int Estoque { get; set; }
+        public bool Ativo { get; set; }
+    }
+}

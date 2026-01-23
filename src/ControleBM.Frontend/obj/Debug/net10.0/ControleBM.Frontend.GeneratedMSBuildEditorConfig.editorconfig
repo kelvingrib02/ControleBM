@@ -32,24 +32,24 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Pages/CadastroProduto.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FkYXN0cm9Qcm9kdXRvLnJhem9y
+[C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Componets/Card.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZXRzXENhcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Pages/EditarProduto.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdGFyUHJvZHV0by5yYXpvcg==
+[C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Componets/Modal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZXRzXE1vZGFsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+[C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Pages/Clientes/CadastroCliente.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcQ2FkYXN0cm9DbGllbnRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Pages/NotFound.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90Rm91bmQucmF6b3I=
+[C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Pages/Clientes/Clientes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcQ2xpZW50ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Pages/Produtos.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3MucmF6b3I=
+[C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Pages/Clientes/EditarCliente.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcRWRpdGFyQ2xpZW50ZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/_Imports.razor]
@@ -63,3 +63,19 @@ build_metadata.AdditionalFiles.CssScope = b-39pwki7vbc
 [C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-9iheb9pafi
+
+[C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-05wb7fr0pk
+
+[C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Pages/Produtos/CadastroProduto.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcQ2FkYXN0cm9Qcm9kdXRvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-ju2ufvby7d
+
+[C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Pages/Produtos/EditarProduto.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcRWRpdGFyUHJvZHV0by5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-9fbqmkuzvr
+
+[C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Pages/Produtos/Produtos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcUHJvZHV0b3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-qwllpacfk0
