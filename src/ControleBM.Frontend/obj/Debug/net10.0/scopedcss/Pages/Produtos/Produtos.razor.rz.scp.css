@@ -1,5 +1,5 @@
 .page-container[b-qwllpacfk0] {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    background: #fff;
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -71,12 +71,13 @@
         padding: 1rem;
         text-align: left;
         border-bottom: 1px solid #f0f0f0;
+        color: #6c7293;
     }
 
     .data-table th[b-qwllpacfk0] {
         font-size: 0.75rem;
         text-transform: uppercase;
-        color: #6c7293;
+        color: #000000;
         font-weight: 600;
         background: #fafafa;
     }
