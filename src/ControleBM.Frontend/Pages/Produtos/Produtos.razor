@@ -1,4 +1,8 @@
 ﻿@page "/produtos"
+@using ControleBM.Frontend.Services
+@using ControleBM.Shared.DTOs
+@using ControleBM.Shared.Enums
+@inject IProdutoService ProdutoService
 @inject NavigationManager Navigation
 
 <div class="page-container">
@@ -15,7 +19,7 @@
             <option value="">Todas categorias</option>
             <option value="eletronicos">Eletrônicos</option>
             <option value="roupas">Roupas</option>
-            <option value="alimentos">Alimentos</option>
+            <Component />
         </select>
     </div>
 
@@ -28,7 +32,6 @@
                     <th>Categoria</th>
                     <th>Preço</th>
                     <th>Estoque</th>
-                    <th>Status</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -38,16 +41,11 @@
                     <tr>
                         <td><span class="code">#@produto.Id</span></td>
                         <td>@produto.Nome</td>
-                        <td>@produto.Categoria</td>
-                        <td>R$ @produto.Preco.ToString("N2")</td>
+                        <td>@produto.Descricao</td>
+                        <td>R$ @produto.PrecoVenda.ToString("N2")</td>
                         <td>
-                            <span class="stock @(produto.Estoque < 10 ? "low" : "")">
-                                @produto.Estoque unid.
-                            </span>
-                        </td>
-                        <td>
-                            <span class="badge @(produto.Ativo ? "badge-success" : "badge-danger")">
-                                @(produto.Ativo ? "Ativo" : "Inativo")
+                            <span class="stock @(produto.EstoqueAtual < 10 ? "low" : "")">
+                                @produto.EstoqueAtual unid.
                             </span>
                         </td>
                         <td>
@@ -64,28 +62,32 @@
 </div>
 
 @code {
+    private List<ProdutoResponseDto> produtos = new();
     private string searchTerm = "";
     private string filtroCategoria = "";
+    private TipoProduto? filtroTipo = null;
 
-    private List<Produto> produtos = new()
+    protected override async Task OnInitializedAsync()
     {
-        new Produto { Id = 1, Nome = "Notebook Dell", Categoria = "Eletrônicos", Preco = 3500.00m, Estoque = 15, Ativo = true },
-        new Produto { Id = 2, Nome = "Mouse Gamer", Categoria = "Eletrônicos", Preco = 150.00m, Estoque = 5, Ativo = true },
-        new Produto { Id = 3, Nome = "Camiseta Básica", Categoria = "Roupas", Preco = 49.90m, Estoque = 100, Ativo = true },
-        new Produto { Id = 4, Nome = "Teclado Mecânico", Categoria = "Eletrônicos", Preco = 450.00m, Estoque = 8, Ativo = false },
-    };
+        produtos = await ProdutoService.GetProdutosAsync();
+    }
 
-    private void NovoProduto() => Navigation.NavigateTo("/produtos/cadastro");
-    private void Editar(int id) => Navigation.NavigateTo($"/produtos/editar/{id}");
-    private void Excluir(int id) { /* implementar modal de confirmação */ }
+    private IEnumerable<ProdutoResponseDto> ProdutosFiltrados =>
+        produtos.Where(p =>
+            (string.IsNullOrWhiteSpace(searchTerm) ||
+             p.Nome.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) &&
+            (!filtroTipo.HasValue || p.Tipo == filtroTipo)
+        );
 
-    public class Produto
+    private void NovoProduto()
+        => Navigation.NavigateTo("/produtos/cadastro");
+
+    private void Editar(Guid id)
+        => Navigation.NavigateTo($"/produtos/editar/{id}");
+
+    private async Task Excluir(Guid id)
     {
-        public int Id { get; set; }
-        public string Nome { get; set; } = "";
-        public string Categoria { get; set; } = "";
-        public decimal Preco { get; set; }
-        public int Estoque { get; set; }
-        public bool Ativo { get; set; }
+        await ProdutoService.DeleteProdutoAsync(id);
+        produtos = await ProdutoService.GetProdutosAsync();
     }
 }

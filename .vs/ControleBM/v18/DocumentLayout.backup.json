@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\pages\\produtos\\produtos.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\pages\\produtos\\produtos.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\pages\\produtos\\produtos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\pages\\produtos\\produtos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\pages\\produtos\\produtos.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\pages\\produtos\\produtos.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\pages\\home.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -26,30 +30,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Produtos.razor.css",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Pages\\Produtos\\Produtos.razor.css",
-              "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Pages\\Produtos\\Produtos.razor.css",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Pages\\Produtos\\Produtos.razor.css",
-              "RelativeToolTip": "src\\ControleBM.Frontend\\Pages\\Produtos\\Produtos.razor.css",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAE8AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-23T02:43:15.231Z",
+              "DocumentIndex": 1,
+              "Title": "ProdutoService.cs",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Services\\ProdutoService.cs",
+              "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Services\\ProdutoService.cs",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Services\\ProdutoService.cs",
+              "RelativeToolTip": "src\\ControleBM.Frontend\\Services\\ProdutoService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAowCYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T02:02:16.344Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Produtos.razor",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Pages\\Produtos\\Produtos.razor",
               "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Pages\\Produtos\\Produtos.razor",
               "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Pages\\Produtos\\Produtos.razor",
               "RelativeToolTip": "src\\ControleBM.Frontend\\Pages\\Produtos\\Produtos.razor",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACYAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-01-23T02:43:04.305Z",
               "EditorCaption": ""
@@ -57,6 +61,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Produtos.razor.css",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Pages\\Produtos\\Produtos.razor.css",
+              "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Pages\\Produtos\\Produtos.razor.css",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Pages\\Produtos\\Produtos.razor.css",
+              "RelativeToolTip": "src\\ControleBM.Frontend\\Pages\\Produtos\\Produtos.razor.css",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAFsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-23T02:43:15.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Home.razor.css",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Pages\\Home.razor.css",
               "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Pages\\Home.razor.css",
@@ -64,12 +81,11 @@
               "RelativeToolTip": "src\\ControleBM.Frontend\\Pages\\Home.razor.css",
               "ViewState": "AgIAACEAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-29T01:45:32.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-29T01:45:32.578Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Pages\\Home.razor",
@@ -77,8 +93,7 @@
               "RelativeToolTip": "src\\ControleBM.Frontend\\Pages\\Home.razor",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-23T02:40:40.944Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-23T02:40:40.944Z"
             }
           ]
         }
