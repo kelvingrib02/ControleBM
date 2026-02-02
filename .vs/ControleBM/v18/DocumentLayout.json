@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainLayout.razor.css",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Layout\\MainLayout.razor.css",
+              "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Layout\\MainLayout.razor.css",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Layout\\MainLayout.razor.css",
+              "RelativeToolTip": "src\\ControleBM.Frontend\\Layout\\MainLayout.razor.css",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAwEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-02T02:15:25.991Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -32,35 +41,9 @@
               "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Layout\\MainLayout.razor",
               "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Layout\\MainLayout.razor",
               "RelativeToolTip": "src\\ControleBM.Frontend\\Layout\\MainLayout.razor",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwBIAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-31T19:45:29.28Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NavMenu.razor.css",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Layout\\NavMenu.razor.css",
-              "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Layout\\NavMenu.razor.css",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Layout\\NavMenu.razor.css",
-              "RelativeToolTip": "src\\ControleBM.Frontend\\Layout\\NavMenu.razor.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-31T19:02:35.93Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Layout\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "src\\ControleBM.Frontend\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEMAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-31T19:01:49.477Z",
+              "WhenOpened": "2026-02-02T02:15:10.583Z",
               "EditorCaption": ""
             }
           ]

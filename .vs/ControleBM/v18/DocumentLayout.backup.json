@@ -3,36 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\pages\\produtos\\produtos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\pages\\produtos\\produtos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C487ED0E-3648-4526-9F4F-B19D306E4528}|src\\ControleBM.Application\\ControleBM.Application.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.application\\controlebm.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{C487ED0E-3648-4526-9F4F-B19D306E4528}|src\\ControleBM.Application\\ControleBM.Application.csproj|solutionrelative:src\\controlebm.application\\controlebm.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0D80505-4849-42DF-AF5D-6F3065FF1BED}|src\\ControleBM.API\\ControleBM.API.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F0D80505-4849-42DF-AF5D-6F3065FF1BED}|src\\ControleBM.API\\ControleBM.API.csproj|solutionrelative:src\\controlebm.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0D80505-4849-42DF-AF5D-6F3065FF1BED}|src\\ControleBM.API\\ControleBM.API.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.api\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F0D80505-4849-42DF-AF5D-6F3065FF1BED}|src\\ControleBM.API\\ControleBM.API.csproj|solutionrelative:src\\controlebm.api\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0DD582A-371D-4DD5-96CC-A3C2E1ECCAF6}|src\\ControleBM.Shared\\ControleBM.Shared.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.shared\\dtos\\produtodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0DD582A-371D-4DD5-96CC-A3C2E1ECCAF6}|src\\ControleBM.Shared\\ControleBM.Shared.csproj|solutionrelative:src\\controlebm.shared\\dtos\\produtodtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProdutoService.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Services\\ProdutoService.cs",
-              "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Services\\ProdutoService.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Services\\ProdutoService.cs",
-              "RelativeToolTip": "src\\ControleBM.Frontend\\Services\\ProdutoService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAowBAAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T02:03:05.169Z",
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "src\\ControleBM.Frontend\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-31T19:45:29.28Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Program.cs",
-              "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Program.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Program.cs",
-              "RelativeToolTip": "src\\ControleBM.Frontend\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T02:00:36.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ControleBM.Application",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Application\\ControleBM.Application.csproj",
-              "RelativeDocumentMoniker": "src\\ControleBM.Application\\ControleBM.Application.csproj",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Application\\ControleBM.Application.csproj",
-              "RelativeToolTip": "src\\ControleBM.Application\\ControleBM.Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-30T01:59:59.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.API\\Program.cs",
-              "RelativeDocumentMoniker": "src\\ControleBM.API\\Program.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.API\\Program.cs",
-              "RelativeToolTip": "src\\ControleBM.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T01:59:44.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProdutoDTOs.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Shared\\DTOs\\ProdutoDTOs.cs",
-              "RelativeDocumentMoniker": "src\\ControleBM.Shared\\DTOs\\ProdutoDTOs.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Shared\\DTOs\\ProdutoDTOs.cs",
-              "RelativeToolTip": "src\\ControleBM.Shared\\DTOs\\ProdutoDTOs.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T01:57:37.957Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Produto.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Models\\Produto.cs",
-              "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Models\\Produto.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Models\\Produto.cs",
-              "RelativeToolTip": "src\\ControleBM.Frontend\\Models\\Produto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T01:51:03.482Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProdutosController.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.API\\Controllers\\ProdutosController.cs",
-              "RelativeDocumentMoniker": "src\\ControleBM.API\\Controllers\\ProdutosController.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.API\\Controllers\\ProdutosController.cs",
-              "RelativeToolTip": "src\\ControleBM.API\\Controllers\\ProdutosController.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAuwIMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T01:46:09.051Z",
+              "Title": "NavMenu.razor.css",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Layout\\NavMenu.razor.css",
+              "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Layout\\NavMenu.razor.css",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Layout\\NavMenu.razor.css",
+              "RelativeToolTip": "src\\ControleBM.Frontend\\Layout\\NavMenu.razor.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-31T19:02:35.93Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Produtos.razor",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Pages\\Produtos\\Produtos.razor",
-              "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Pages\\Produtos\\Produtos.razor",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Pages\\Produtos\\Produtos.razor",
-              "RelativeToolTip": "src\\ControleBM.Frontend\\Pages\\Produtos\\Produtos.razor",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEIAAAAoAAAAAAAAAA==",
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "src\\ControleBM.Frontend\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-30T01:45:58.529Z",
+              "WhenOpened": "2026-01-31T19:01:49.477Z",
               "EditorCaption": ""
             }
           ]

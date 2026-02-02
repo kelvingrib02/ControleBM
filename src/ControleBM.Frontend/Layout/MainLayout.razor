@@ -1,65 +1,19 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page-layout d-flex">
+<div class="page-layout">
 
     <div class="sidebar-wrapper d-none d-md-block">
         <NavMenu />
     </div>
 
-    <main class="content-wrapper flex-grow-1">
-        <div class="d-md-none p-3 d-flex justify-content-between align-items-center bg-dark-header">
-            <span class="fw-bold text-white">KS Scheduler</span>
-            <button class="btn btn-sm btn-outline-success">☰</button>
+    <main class="content-wrapper">
+        <div class="mobile-header d-md-none">
+            <span class="mobile-title">Bar do Marcio</span>
+            <button class="mobile-menu-btn">☰</button>
         </div>
 
-        <div class="p-4 fade-in">
+        <div class="content-body fade-in">
             @Body
         </div>
     </main>
 </div>
-
-<style>
-    :root {
-        --bg-dark: #0f172a;
-    }
-
-    body, html, .page-layout {
-        background-color: var(--bg-dark) !important;
-        color: white;
-        min-height: 100vh;
-    }
-
-    .sidebar-wrapper {
-        width: 260px;
-        height: 100vh;
-        position: sticky;
-        top: 0;
-    }
-
-    .content-wrapper {
-        background-color: var(--bg-dark);
-        overflow-y: auto;
-        height: 100vh;
-    }
-
-    .bg-dark-header {
-        background-color: #1e293b;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .fade-in {
-        animation: fadeIn 0.5s ease-in-out;
-    }
-
-    @@keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(10px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-</style>
