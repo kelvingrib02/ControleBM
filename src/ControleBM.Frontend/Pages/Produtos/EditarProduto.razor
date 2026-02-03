@@ -30,12 +30,22 @@ else
         <div class="row">
             <div class="col-md-6 mb-3">
                 <label class="form-label">Preço de Venda:</label>
-                <InputNumber @bind-Value="produto.PrecoVenda" class="form-control" />
+                <div class="input-group">
+                    <span class="input-group-text">R$</span>
+                    <InputNumber @bind-Value="produto.PrecoVenda"
+                                 class="form-control"
+                                 step="0.01" />
+                </div>
             </div>
 
             <div class="col-md-6 mb-3">
                 <label class="form-label">Custo Unitário:</label>
-                <InputNumber @bind-Value="produto.CustoUnitario" class="form-control" />
+                <div class="input-group">
+                    <span class="input-group-text">R$</span>
+                    <InputNumber @bind-Value="produto.CustoUnitario"
+                                 class="form-control"
+                                 step="0.01" />
+                </div>
             </div>
         </div>
 
@@ -78,6 +88,7 @@ else
             produto = new ProdutoRequestDto
             {
                 Nome = produtoExistente.Nome,
+                Descricao = produtoExistente.Descricao,
                 PrecoVenda = produtoExistente.PrecoVenda,
                 CustoUnitario = produtoExistente.CustoUnitario,
                 EstoqueAtual = produtoExistente.EstoqueAtual,

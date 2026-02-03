@@ -15,7 +15,7 @@
 
     <div class="filters-bar">
         <input type="text" class="input-search" placeholder="Buscar produto..." @bind="searchTerm" @bind:event="oninput" />
-        <select class="input-select" @bind="filtroCategoria">
+        <select class="input-select" @bind="filtroTipo">
             <option value="">Todas categorias</option>
             <option value="eletronicos">Eletrônicos</option>
             <option value="roupas">Roupas</option>
@@ -27,9 +27,9 @@
         <table class="data-table">
             <thead>
                 <tr>
-                    <th>Código</th>
                     <th>Nome</th>
                     <th>Categoria</th>
+                    <th>Custo</th>
                     <th>Preço</th>
                     <th>Estoque</th>
                     <th>Ações</th>
@@ -39,9 +39,9 @@
                 @foreach (var produto in produtos)
                 {
                     <tr>
-                        <td><span class="code">#@produto.Id</span></td>
                         <td>@produto.Nome</td>
-                        <td>@produto.Descricao</td>
+                        <td>@produto.Tipo</td>
+                        <td>R$ @produto.CustoUnitario.ToString("N2")</td>
                         <td>R$ @produto.PrecoVenda.ToString("N2")</td>
                         <td>
                             <span class="stock @(produto.EstoqueAtual < 10 ? "low" : "")">
