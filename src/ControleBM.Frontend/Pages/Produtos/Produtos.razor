@@ -16,9 +16,6 @@
     <div class="filters-bar">
         <input type="text" class="input-search" placeholder="Buscar produto..." @bind="searchTerm" @bind:event="oninput" />
         <select class="input-select" @bind="filtroTipo">
-            <option value="">Todas categorias</option>
-            <option value="eletronicos">Eletrônicos</option>
-            <option value="roupas">Roupas</option>
             <Component />
         </select>
     </div>

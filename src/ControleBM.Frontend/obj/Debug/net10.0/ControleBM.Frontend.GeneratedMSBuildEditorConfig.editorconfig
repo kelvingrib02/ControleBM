@@ -44,10 +44,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcQ2FkYXN0cm9DbGllbnRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Pages/Clientes/Clientes.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcQ2xpZW50ZXMucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Pages/Clientes/EditarCliente.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcRWRpdGFyQ2xpZW50ZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -67,6 +63,10 @@ build_metadata.AdditionalFiles.CssScope = b-39pwki7vbc
 [C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-9iheb9pafi
+
+[C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Pages/Clientes/Clientes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcQ2xpZW50ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-9vv8fp2jgu
 
 [C:/Users/55129/Documents/Projetos/ControleBM/src/ControleBM.Frontend/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==

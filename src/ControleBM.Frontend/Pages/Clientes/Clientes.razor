@@ -1,5 +1,82 @@
-﻿<h3>Clientes</h3>
+﻿@page "/clientes"
+@using ControleBM.Frontend.Services
+@using ControleBM.Shared.DTOs
+@using ControleBM.Shared.Enums
+@inject IClienteService ClienteService
+@inject NavigationManager Navigation
+
+<div class="page-container">
+    <div class="page-header">
+        <h2>Clientes</h2>
+        <button class="btn btn-primary" @onclick="NovoCliente">
+            + Novo Cliente
+        </button>
+    </div>
+
+    <div class="filters-bar">
+        <input type="text" class="input-search" placeholder="Buscar cliente..." @bind="searchTerm" @bind:event="oninput" />
+        <select class="input-select" @bind="filtroTipo">
+            <Component />
+        </select>
+    </div>
+
+    <div class="table-container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Saldo Devedor</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var cliente in clientes)
+                {
+                    <tr>
+                        <td>@cliente.Nome</td>
+                        <td>@cliente.Telefone</td>
+                        <td>R$ @cliente.SaldoDevedor.ToString("N2")</td>
+                        <td>
+                            <div class="actions">
+                                <button class="btn-icon" title="Editar" @onclick="() => Editar(cliente.Id)">✏️</button>
+                                <button class="btn-icon" title="Excluir" @onclick="() => Excluir(cliente.Id)">🗑️</button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
 
 @code {
+    private List<ClienteResponseDto> clientes = new();
+    private string searchTerm = "";
+    private string filtroCategoria = "";
+    private TipoProduto? filtroTipo = null;
 
+    protected override async Task OnInitializedAsync()
+    {
+        clientes = await ClienteService.GetClienteAsync();
+    }
+
+    // private IEnumerable<ClienteResponseDto> ProdutosFiltrados =>
+    //     clientes.Where(p =>
+    //         (string.IsNullOrWhiteSpace(searchTerm) ||
+    //          p.Nome.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) &&
+    //         (!filtroTipo.HasValue || p.Tipo == filtroTipo)
+    //     );
+
+    private void NovoCliente()
+        => Navigation.NavigateTo("/clientes/cadastro");
+
+    private void Editar(Guid id)
+        => Navigation.NavigateTo($"/clientes/editar/{id}");
+
+    private async Task Excluir(Guid id)
+    {
+        await ClienteService.DeleteClienteAsync(id);
+        clientes = await ClienteService.GetClienteAsync();
+    }
 }
