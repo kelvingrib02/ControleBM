@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ControleBM.Frontend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8980f25eb7f1574521b0757210dfc7a444a4b2c5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24fba00966105f33a3fcd7ea1a0462aa3df38838")]
 [assembly: System.Reflection.AssemblyProductAttribute("ControleBM.Frontend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ControleBM.Frontend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

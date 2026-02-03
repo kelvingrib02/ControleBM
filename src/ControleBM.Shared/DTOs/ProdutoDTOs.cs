@@ -1,5 +1,4 @@
 ﻿using ControleBM.Shared.Enums;
-using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace ControleBM.Shared.DTOs

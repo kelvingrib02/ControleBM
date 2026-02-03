@@ -1,4 +1,8 @@
 ﻿@page "/"
+@using ControleBM.Shared.DTOs
+@using ControleBM.Frontend.Services
+@inject IProdutoService ProdutoService
+@inject IClienteService ClienteService
 
 <div class="dashboard">
     <!-- Cards de Resumo -->
@@ -6,7 +10,7 @@
         <div class="card card-primary">
             <div class="card-icon">💰</div>
             <div class="card-info">
-                <span class="card-value">R$ 45.230,00</span>
+                <span class="card-value">@totalReceitaMes</span>
                 <span class="card-label">Receita do Mês</span>
             </div>
         </div>
@@ -30,7 +34,7 @@
         <div class="card card-danger">
             <div class="card-icon">📉</div>
             <div class="card-info">
-                <span class="card-value">R$ 12.450,00</span>
+                <span class="card-value">@totalDespesasMes</span>
                 <span class="card-label">Despesas do Mês</span>
             </div>
         </div>
@@ -104,6 +108,25 @@
 </div>
 
 @code {
-    private int totalProdutos = 156;
-    private int totalClientes = 89;
+    private int totalProdutos;
+    private int totalClientes;
+    private int totalDespesasMes;
+    private int totalReceitaMes;
+
+    private List<ProdutoResponseDto> produtos = new();
+    private List<ClienteResponseDto> clientes = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        produtos = await ProdutoService.GetProdutosAsync();
+        clientes = await ClienteService.GetClienteAsync();
+
+        totalProdutos = produtos.Count;
+        totalClientes = clientes.Count;
+
+        var mesAtual = DateTime.Now.Month;
+        var anoAtual = DateTime.Now.Year;
+
+        //receitaMes = vendas.Where(v => v.Data.Month == mesAtual && v.Data.Year == anoAtual).Sum(v => v.ValorTotal);
+    }
 }
