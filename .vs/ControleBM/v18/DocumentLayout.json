@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0D80505-4849-42DF-AF5D-6F3065FF1BED}|src\\ControleBM.API\\ControleBM.API.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.api\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0D80505-4849-42DF-AF5D-6F3065FF1BED}|src\\ControleBM.API\\ControleBM.API.csproj|solutionrelative:src\\controlebm.api\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0DD582A-371D-4DD5-96CC-A3C2E1ECCAF6}|src\\ControleBM.Shared\\ControleBM.Shared.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.shared\\dtos\\clientedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0DD582A-371D-4DD5-96CC-A3C2E1ECCAF6}|src\\ControleBM.Shared\\ControleBM.Shared.csproj|solutionrelative:src\\controlebm.shared\\dtos\\clientedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.frontend\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3494CE5-B06E-4863-9189-3D259AE45A23}|src\\ControleBM.Frontend\\ControleBM.Frontend.csproj|solutionrelative:src\\controlebm.frontend\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{003B686F-BE02-4E04-8D5B-62E968A80B83}|src\\ControleBM.Domain\\ControleBM.Domain.csproj|c:\\users\\55129\\documents\\projetos\\controlebm\\src\\controlebm.domain\\entities\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{003B686F-BE02-4E04-8D5B-62E968A80B83}|src\\ControleBM.Domain\\ControleBM.Domain.csproj|solutionrelative:src\\controlebm.domain\\entities\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,19 +30,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Program.cs",
-              "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Program.cs",
-              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Program.cs",
-              "RelativeToolTip": "src\\ControleBM.Frontend\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Produto.cs",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Domain\\Entities\\Produto.cs",
+              "RelativeDocumentMoniker": "src\\ControleBM.Domain\\Entities\\Produto.cs",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Domain\\Entities\\Produto.cs",
+              "RelativeToolTip": "src\\ControleBM.Domain\\Entities\\Produto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T03:31:53.406Z",
+              "WhenOpened": "2026-02-03T03:40:54.054Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClienteDTOs.cs",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Shared\\DTOs\\ClienteDTOs.cs",
+              "RelativeDocumentMoniker": "src\\ControleBM.Shared\\DTOs\\ClienteDTOs.cs",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Shared\\DTOs\\ClienteDTOs.cs",
+              "RelativeToolTip": "src\\ControleBM.Shared\\DTOs\\ClienteDTOs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T03:49:09.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClienteService.cs",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Services\\ClienteService.cs",
+              "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Services\\ClienteService.cs",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Services\\ClienteService.cs",
+              "RelativeToolTip": "src\\ControleBM.Frontend\\Services\\ClienteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T03:48:11.576Z",
               "EditorCaption": ""
             },
             {
@@ -41,9 +80,22 @@
               "RelativeDocumentMoniker": "src\\ControleBM.Frontend\\Pages\\Home.razor",
               "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.Frontend\\Pages\\Home.razor",
               "RelativeToolTip": "src\\ControleBM.Frontend\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAH0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-03T02:42:08.336Z",
+              "WhenOpened": "2026-02-03T03:48:01.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.API\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "src\\ControleBM.API\\Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Users\\55129\\Documents\\Projetos\\ControleBM\\src\\ControleBM.API\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "src\\ControleBM.API\\Controllers\\ClientesController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAuwFwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T03:38:19.75Z",
               "EditorCaption": ""
             }
           ]

@@ -8,6 +8,8 @@ namespace ControleBM.Shared.DTOs
         public string Nome { get; set; } = string.Empty;
         public string Telefone { get; set; } = string.Empty;
         public decimal SaldoDevedor { get; set; }
+        public bool Ativo { get; set; } = true;
+
     }
 
     public class ClienteRequestDto
@@ -16,5 +18,7 @@ namespace ControleBM.Shared.DTOs
         public string Nome { get; set; } = string.Empty;
         public string Telefone { get; set; } = string.Empty;
         public decimal SaldoDevedor { get; set; }
+        public bool Ativo { get; set; } = true;
+
     }
 }
