@@ -1,29 +1,18 @@
-🍻 BarControl – Sistema de Gestão do Bar do Márcio
+# 🍻 BarControl – Sistema de Gestão do Bar do Márcio
 
-Management system developed for Bar do Márcio, focused on:
+Management system for barbershops, focused on:
 
-control of clients
-
-management of products
-
-sales registration (vendas)
-
-monitoring of stock
-
-financial tracking (receita e despesas)
-
-(future) profitability and business metrics
+- control of **clients**
+- **barbers**
+- **services**
+- **appointments**
+- (future) visibility of **profitability** and business metrics
 
 Project developed as a practical study of:
 
-.NET 10
-
-ASP.NET Core Web API
-
-Blazor WebAssembly
-
-Entity Framework Core 10
-
-SQL Server
-
-Layered Architecture (Domain / Infrastructure / API / Frontend)
+- .NET 10
+- ASP.NET Core Web API
+- Blazor
+- Entity Framework Core 10
+- PostgreSQL
+- Layered architecture (Domain / Infrastructure / API / UI)
