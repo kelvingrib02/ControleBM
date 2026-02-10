@@ -1,4 +1,4 @@
-# 🍻 BarControl – Sistema de Gestão do Bar do Márcio
+# 🍻 BarControl – Sistema de Gestão
 
 Management system for barbershops, focused on:
 
