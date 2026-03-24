@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ControleBM.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2254cbcbc512860b139a910e1d8e2d6c4ce7d4b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be80e9ff694f47d30d0c1826d884209520274554")]
 [assembly: System.Reflection.AssemblyProductAttribute("ControleBM.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ControleBM.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

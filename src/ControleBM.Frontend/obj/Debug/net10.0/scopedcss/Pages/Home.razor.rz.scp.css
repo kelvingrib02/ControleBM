@@ -145,6 +145,10 @@
         border-bottom: none;
     }
 
+.item-name[b-05wb7fr0pk] {
+    color: #1a1a2e;
+}
+
 .item-qty.danger[b-05wb7fr0pk] {
     color: #ef4444;
     font-weight: 600;

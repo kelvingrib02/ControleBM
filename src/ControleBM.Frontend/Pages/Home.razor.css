@@ -145,6 +145,10 @@
         border-bottom: none;
     }
 
+.item-name {
+    color: #1a1a2e;
+}
+
 .item-qty.danger {
     color: #ef4444;
     font-weight: 600;
