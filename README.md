@@ -1,12 +1,4 @@
-# 🍻 BarControl – Sistema de Gestão
-
-Management system for barbershops, focused on:
-
-- control of **clients**
-- **barbers**
-- **services**
-- **appointments**
-- (future) visibility of **profitability** and business metrics
+BarControl – Sistema de Gestão
 
 Project developed as a practical study of:
 
