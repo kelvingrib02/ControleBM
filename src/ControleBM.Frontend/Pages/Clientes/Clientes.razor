@@ -1,82 +1,117 @@
-﻿@page "/clientes"
+@page "/clientes"
 @using ControleBM.Frontend.Services
 @using ControleBM.Shared.DTOs
-@using ControleBM.Shared.Enums
 @inject IClienteService ClienteService
 @inject NavigationManager Navigation
+@inject IJSRuntime JS
 
-<div class="page-container">
-    <div class="page-header">
-        <h2>Clientes</h2>
-        <button class="btn btn-primary" @onclick="NovoCliente">
-            + Novo Cliente
-        </button>
+<div class="page-header">
+    <div>
+        <h1>Clientes</h1>
+        <p class="page-subtitle">@clientes.Count cadastrados</p>
     </div>
+    <button class="btn btn-primary btn-lg" @onclick="NovoCliente">+ Novo Cliente</button>
+</div>
 
-    <div class="filters-bar">
-        <input type="text" class="input-search" placeholder="Buscar cliente..." @bind="searchTerm" @bind:event="oninput" />
-        <select class="input-select" @bind="filtroTipo">
-            <Component />
-        </select>
-    </div>
+<div class="filters-bar">
+    <input type="text" class="input-search" placeholder="Buscar cliente pelo nome..."
+           @bind="searchTerm" @bind:event="oninput" />
+    <select class="input-select" @bind="soDevedores">
+        <option value="false">Todos os clientes</option>
+        <option value="true">Só quem está devendo</option>
+    </select>
+</div>
 
+@if (semConexao)
+{
     <div class="table-container">
-        <table class="data-table">
-            <thead>
+        <div class="vazio">Não foi possível conectar ao servidor.<br />Verifique se o sistema está ligado e tente de novo.</div>
+    </div>
+}
+else
+{
+<div class="table-container">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Situação</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (!ClientesFiltrados.Any())
+            {
                 <tr>
-                    <th>Nome</th>
-                    <th>Telefone</th>
-                    <th>Saldo Devedor</th>
-                    <th>Ações</th>
+                    <td colspan="4"><div class="vazio">Nenhum cliente encontrado.</div></td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var cliente in clientes)
+            }
+            else
+            {
+                @foreach (var cliente in ClientesFiltrados)
                 {
                     <tr>
-                        <td>@cliente.Nome</td>
-                        <td>@cliente.Telefone</td>
-                        <td>R$ @cliente.SaldoDevedor.ToString("N2")</td>
+                        <td class="celula-forte">@cliente.Nome</td>
+                        <td>@(string.IsNullOrWhiteSpace(cliente.Telefone) ? "—" : cliente.Telefone)</td>
                         <td>
-                            <div class="actions">
-                                <button class="btn-icon" title="Editar" @onclick="() => Editar(cliente.Id)">✏️</button>
-                                <button class="btn-icon" title="Excluir" @onclick="() => Excluir(cliente.Id)">🗑️</button>
+                            @if (cliente.SaldoDevedor > 0)
+                            {
+                                <span class="valor-deve">Deve @cliente.SaldoDevedor.ToString("C")</span>
+                            }
+                            else
+                            {
+                                <span class="pill pill-ok">Em dia</span>
+                            }
+                        </td>
+                        <td>
+                            <div class="col-acoes">
+                                <button class="btn-acao editar" @onclick="() => Editar(cliente.Id)">✏️ Editar</button>
+                                <button class="btn-acao excluir" @onclick="() => Excluir(cliente)">🗑️ Excluir</button>
                             </div>
                         </td>
                     </tr>
                 }
-            </tbody>
-        </table>
-    </div>
+            }
+        </tbody>
+    </table>
 </div>
+}
 
 @code {
     private List<ClienteResponseDto> clientes = new();
     private string searchTerm = "";
-    private string filtroCategoria = "";
-    private TipoProduto? filtroTipo = null;
+    private bool soDevedores = false;
+    private bool semConexao;
 
     protected override async Task OnInitializedAsync()
     {
-        clientes = await ClienteService.GetClienteAsync();
+        try
+        {
+            clientes = await ClienteService.GetClienteAsync();
+        }
+        catch
+        {
+            semConexao = true;
+        }
     }
 
-    // private IEnumerable<ClienteResponseDto> ProdutosFiltrados =>
-    //     clientes.Where(p =>
-    //         (string.IsNullOrWhiteSpace(searchTerm) ||
-    //          p.Nome.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) &&
-    //         (!filtroTipo.HasValue || p.Tipo == filtroTipo)
-    //     );
+    private IEnumerable<ClienteResponseDto> ClientesFiltrados =>
+        clientes.Where(c =>
+            (string.IsNullOrWhiteSpace(searchTerm) ||
+             c.Nome.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) &&
+            (!soDevedores || c.SaldoDevedor > 0));
 
-    private void NovoCliente()
-        => Navigation.NavigateTo("/clientes/cadastro");
+    private void NovoCliente() => Navigation.NavigateTo("/clientes/cadastro");
 
-    private void Editar(Guid id)
-        => Navigation.NavigateTo($"/clientes/editar/{id}");
+    private void Editar(Guid id) => Navigation.NavigateTo($"/clientes/editar/{id}");
 
-    private async Task Excluir(Guid id)
+    private async Task Excluir(ClienteResponseDto cliente)
     {
-        await ClienteService.DeleteClienteAsync(id);
+        var ok = await JS.InvokeAsync<bool>("confirm", $"Excluir o cliente \"{cliente.Nome}\"?");
+        if (!ok) return;
+
+        await ClienteService.DeleteClienteAsync(cliente.Id);
         clientes = await ClienteService.GetClienteAsync();
     }
 }

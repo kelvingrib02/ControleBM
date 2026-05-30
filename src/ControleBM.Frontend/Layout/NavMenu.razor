@@ -1,142 +1,38 @@
-﻿@inject NavigationManager NavManager
+@inject NavigationManager NavManager
 
-<div class="sidebar-container h-100 d-flex flex-column">
+<div class="sidebar">
 
-    <div class="logo-section p-4">
-        <div class="fw-bold text-white fs-4">Bar do <span class="text-gradient">Marcio</span></div>
+    <div class="sidebar-logo">
+        <span class="marca">Bar do Marcio</span>
+        <span class="sub">Controle</span>
     </div>
 
-    <div class="border-top border-secondary border-opacity-25">
-        <nav class="nav-menu p-4">
-            <NavLink class="nav-link d-flex align-items-center mb-2" href="" Match="NavLinkMatch.All">
-                <span class="icon-box me-3">📊</span>
-                <span class="fw-bold">Resumo do Bar</span>
-            </NavLink>
+    <nav class="sidebar-nav">
+        <NavLink class="menu-item" href="" Match="NavLinkMatch.All" @onclick="OnLinkClick">
+            <span class="menu-icon">🏠</span>
+            <span>Início</span>
+        </NavLink>
 
-            <NavLink class="nav-link d-flex align-items-center mb-2" href="produtos">
-                <span class="icon-box me-3">📦</span>
-                <span class="fw-bold">Produtos</span>
-            </NavLink>
+        <NavLink class="menu-item" href="produtos" @onclick="OnLinkClick">
+            <span class="menu-icon">📦</span>
+            <span>Produtos</span>
+        </NavLink>
 
-            <NavLink class="nav-link d-flex align-items-center mb-2" href="clientes">
-                <span class="icon-box me-3">👥</span>
-                <span class="fw-bold">Clientes</span>
-            </NavLink>
+        <NavLink class="menu-item" href="clientes" @onclick="OnLinkClick">
+            <span class="menu-icon">👥</span>
+            <span>Clientes</span>
+        </NavLink>
+    </nav>
 
-            <NavLink class="nav-link d-flex align-items-center mb-2" href="financeiro">
-                <span class="icon-box me-3">💰</span>
-                <span class="fw-bold">Financeiro</span>
-            </NavLink>
-
-            <NavLink class="nav-link d-flex align-items-center mb-2" href="estatisticas">
-                <span class="icon-box me-3">📈</span>
-                <span class="fw-bold">Relatório</span>
-            </NavLink>
-        </nav>
-    </div>
-
-    <div class="mt-auto p-4 border-top border-secondary border-opacity-25">
-        <div class="d-flex align-items-center mb-3">
-            <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center me-3 text-white fw-bold"
-                 style="width: 40px; height: 40px; font-size: 0.9rem;">
-                KR
-            </div>
-            <div class="d-flex flex-column">
-                <span class="text-white fw-bold" style="font-size: 0.9rem;">Kelvin Ribeiro</span>
-                <small class="text-white" style="font-size: 0.75rem;">kelvin@email.com</small>
-            </div>
+    <div class="sidebar-footer">
+        <div class="sidebar-badge">BM</div>
+        <div>
+            <div class="nome">Bar do Marcio</div>
+            <div class="papel">Sistema de controle</div>
         </div>
-
-        <button class="btn w-100 btn-logout" @onclick="Logout">
-            Sair do sistema
-        </button>
-
     </div>
 </div>
 
 @code {
     [Parameter] public EventCallback OnLinkClick { get; set; }
-
-    private void Logout()
-    {
-        NavManager.NavigateTo("/");
-    }
 }
-
-<style>
-    .sidebar-container {
-        background: linear-gradient(180deg, #1a1512 0%, #2a211d 60%, #3a2a24 100%);
-    }
-
-    .text-gradient {
-        background: linear-gradient(90deg, #fbbf24, #f59e0b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .nav-link {
-        color: #d6d3d1;
-        padding: 0.8rem 1rem;
-        border-radius: 12px;
-        transition: all 0.2s ease;
-        font-weight: 500;
-    }
-
-        .nav-link:hover {
-            background-color: rgba(185, 28, 28, 0.15);
-            color: #ffffff;
-            transform: translateX(5px);
-        }
-
-        .nav-link.active {
-            background: linear-gradient(135deg, #b91c1c, #991b1b);
-            color: white;
-            box-shadow: 0 8px 20px rgba(185, 28, 28, 0.4);
-        }
-
-    .icon-box {
-        font-size: 1.2rem;
-        opacity: 0.7;
-        transition: all 0.2s ease;
-    }
-
-    .nav-link:hover .icon-box,
-    .nav-link.active .icon-box {
-        opacity: 1;
-        transform: scale(1.1);
-    }
-
-    .btn-logout {
-        background: linear-gradient(135deg, #b91c1c, #991b1b);
-        color: white;
-        border: none;
-        padding: 0.6rem;
-        font-weight: bold;
-        border-radius: 12px;
-        transition: all 0.2s ease;
-        box-shadow: 0 10px 20px rgba(185, 28, 28, 0.4);
-    }
-
-        .btn-logout:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 25px rgba(185, 28, 28, 0.6);
-        }
-
-    .logo-section {
-        border-bottom: 1px solid rgba(251, 191, 36, 0.1);
-    }
-
-    small {
-        color: #a8a29e !important;
-    }
-
-    button:focus-visible {
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.5);
-    }
-
-    .btn:focus {
-        box-shadow: none !important;
-    }
-
-</style>

@@ -1,5 +1,76 @@
-﻿<h3>CadastroCliente</h3>
+@page "/clientes/cadastro"
+@using ControleBM.Shared.DTOs
+@using ControleBM.Frontend.Services
+@inject IClienteService ClienteService
+@inject NavigationManager Navigation
+
+<div class="form-container">
+    <div class="form-header">
+        <button class="btn-back" @onclick="Voltar">← Voltar</button>
+        <h1>Novo Cliente</h1>
+    </div>
+
+    <EditForm Model="@cliente" OnValidSubmit="Salvar">
+        <DataAnnotationsValidator />
+
+        <div class="form-card">
+            <div class="form-grid">
+                <div class="form-group full-width">
+                    <label>Nome do cliente</label>
+                    <InputText @bind-Value="cliente.Nome" class="form-input" placeholder="Ex: João da esquina" />
+                    <ValidationMessage For="@(() => cliente.Nome)" />
+                </div>
+
+                <div class="form-group">
+                    <label>Telefone (opcional)</label>
+                    <InputText @bind-Value="cliente.Telefone" class="form-input" placeholder="(00) 00000-0000" />
+                </div>
+
+                <div class="form-group">
+                    <label>Já está devendo? (fiado)</label>
+                    <div class="input-prefixo">
+                        <span class="prefixo">R$</span>
+                        <InputNumber @bind-Value="cliente.SaldoDevedor" class="form-input" step="0.01" placeholder="0,00" />
+                    </div>
+                    <span class="dica">Deixe 0,00 se não deve nada.</span>
+                </div>
+            </div>
+
+            @if (!string.IsNullOrEmpty(erro))
+            {
+                <p class="validation-message">@erro</p>
+            }
+
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary" @onclick="Voltar">Cancelar</button>
+                <button type="submit" class="btn btn-primary" disabled="@salvando">
+                    @(salvando ? "Salvando..." : "Salvar Cliente")
+                </button>
+            </div>
+        </div>
+    </EditForm>
+</div>
 
 @code {
+    private ClienteRequestDto cliente = new() { Nome = "" };
+    private bool salvando;
+    private string? erro;
 
+    private async Task Salvar()
+    {
+        salvando = true;
+        erro = null;
+        try
+        {
+            await ClienteService.CreateClienteAsync(cliente);
+            Navigation.NavigateTo("/clientes");
+        }
+        catch
+        {
+            erro = "Não foi possível salvar. Verifique a conexão e tente de novo.";
+            salvando = false;
+        }
+    }
+
+    private void Voltar() => Navigation.NavigateTo("/clientes");
 }

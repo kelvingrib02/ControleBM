@@ -1,131 +1,152 @@
-﻿@page "/"
+@page "/"
 @using ControleBM.Shared.DTOs
 @using ControleBM.Frontend.Services
 @inject IProdutoService ProdutoService
 @inject IClienteService ClienteService
 
-<div class="dashboard">
-    <!-- Cards de Resumo -->
-    <div class="cards-grid">
-        <div class="card card-primary">
-            <div class="card-icon">💰</div>
-            <div class="card-info">
-                <span class="card-value">@totalReceitaMes</span>
-                <span class="card-label">Receita do Mês</span>
-            </div>
-        </div>
-
-        <div class="card card-success">
-            <div class="card-icon">📦</div>
-            <div class="card-info">
-                <span class="card-value">@totalProdutos</span>
-                <span class="card-label">Produtos Cadastrados</span>
-            </div>
-        </div>
-
-        <div class="card card-warning">
-            <div class="card-icon">👥</div>
-            <div class="card-info">
-                <span class="card-value">@totalClientes</span>
-                <span class="card-label">Clientes Ativos</span>
-            </div>
-        </div>
-
-        <div class="card card-danger">
-            <div class="card-icon">📉</div>
-            <div class="card-info">
-                <span class="card-value">@totalDespesasMes</span>
-                <span class="card-label">Despesas do Mês</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Seção de Conteúdo -->
-    <div class="content-grid">
-        <!-- Últimas Vendas -->
-        <div class="panel">
-            <div class="panel-header">
-                <h3>Últimas Vendas</h3>
-                <a href="vendas" class="btn-link">Ver todas</a>
-            </div>
-            <div class="panel-body">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Cliente</th>
-                            <th>Produto</th>
-                            <th>Valor</th>
-                            <th>Data</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>João Silva</td>
-                            <td>Produto A</td>
-                            <td>R$ 150,00</td>
-                            <td>22/01/2026</td>
-                        </tr>
-                        <tr>
-                            <td>Maria Santos</td>
-                            <td>Produto B</td>
-                            <td>R$ 320,00</td>
-                            <td>21/01/2026</td>
-                        </tr>
-                        <tr>
-                            <td>Pedro Costa</td>
-                            <td>Produto C</td>
-                            <td>R$ 89,90</td>
-                            <td>21/01/2026</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="panel">
-            <div class="panel-header">
-                <h3>Estoque Baixo</h3>
-            </div>
-            <div class="panel-body">
-                <ul class="alert-list">
-                    <li class="alert-item">
-                        <span class="item-name">Produto X</span>
-                        <span class="item-qty danger">3 unid.</span>
-                    </li>
-                    <li class="alert-item">
-                        <span class="item-name">Produto Y</span>
-                        <span class="item-qty warning">8 unid.</span>
-                    </li>
-                    <li class="alert-item">
-                        <span class="item-name">Produto Z</span>
-                        <span class="item-qty warning">10 unid.</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<div class="page-header">
+    <div>
+        <h1>Início</h1>
+        <p class="page-subtitle">Resumo do Bar do Marcio</p>
     </div>
 </div>
 
+@if (carregando)
+{
+    <div class="vazio">Carregando...</div>
+}
+else if (semConexao)
+{
+    <div class="panel">
+        <div class="panel-body">
+            <div class="vazio">Não foi possível conectar ao servidor.<br />Verifique se o sistema está ligado e tente de novo.</div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="cards-grid">
+        <div class="stat">
+            <div class="stat-icon vermelho">💰</div>
+            <div>
+                <div class="stat-value">@TotalAReceber.ToString("C")</div>
+                <span class="stat-label">A receber (fiado)</span>
+            </div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-icon">👥</div>
+            <div>
+                <div class="stat-value">@clientes.Count</div>
+                <span class="stat-label">Clientes ativos</span>
+            </div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-icon">📦</div>
+            <div>
+                <div class="stat-value">@produtos.Count</div>
+                <span class="stat-label">Produtos cadastrados</span>
+            </div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-icon ambar">⚠️</div>
+            <div>
+                <div class="stat-value">@EstoqueBaixo.Count</div>
+                <span class="stat-label">Produtos acabando</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-grid">
+        <div class="panel">
+            <div class="panel-header">
+                <h3>Quem está devendo</h3>
+                <a href="clientes" class="btn-link">Ver clientes</a>
+            </div>
+            <div class="panel-body">
+                @if (!Devedores.Any())
+                {
+                    <div class="vazio">Ninguém está devendo. 👍</div>
+                }
+                else
+                {
+                    <ul class="lista">
+                        @foreach (var c in Devedores)
+                        {
+                            <li class="lista-item">
+                                <span class="nome">@c.Nome</span>
+                                <span class="valor-deve">@c.SaldoDevedor.ToString("C")</span>
+                            </li>
+                        }
+                    </ul>
+                }
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">
+                <h3>Estoque acabando</h3>
+                <a href="produtos" class="btn-link">Ver produtos</a>
+            </div>
+            <div class="panel-body">
+                @if (!EstoqueBaixo.Any())
+                {
+                    <div class="vazio">Estoque tranquilo. 👍</div>
+                }
+                else
+                {
+                    <ul class="lista">
+                        @foreach (var p in EstoqueBaixo)
+                        {
+                            <li class="lista-item">
+                                <span class="nome">@p.Nome</span>
+                                <span class="pill @(p.EstoqueAtual == 0 ? "pill-perigo" : "pill-alerta")">
+                                    @p.EstoqueAtual unid.
+                                </span>
+                            </li>
+                        }
+                    </ul>
+                }
+            </div>
+        </div>
+    </div>
+}
+
 @code {
-    private int totalProdutos;
-    private int totalClientes;
-    private int totalDespesasMes;
-    private int totalReceitaMes;
+    private const int LimiteEstoqueBaixo = 10;
 
     private List<ProdutoResponseDto> produtos = new();
     private List<ClienteResponseDto> clientes = new();
+    private bool carregando = true;
+    private bool semConexao;
 
     protected override async Task OnInitializedAsync()
     {
-        produtos = await ProdutoService.GetProdutosAsync();
-        clientes = await ClienteService.GetClienteAsync();
-
-        totalProdutos = produtos.Count;
-        totalClientes = clientes.Count(c => c.Ativo);
-
-        var mesAtual = DateTime.Now.Month;
-        var anoAtual = DateTime.Now.Year;
-
-        //receitaMes = vendas.Where(v => v.Data.Month == mesAtual && v.Data.Year == anoAtual).Sum(v => v.ValorTotal);
+        try
+        {
+            produtos = await ProdutoService.GetProdutosAsync();
+            clientes = await ClienteService.GetClienteAsync();
+        }
+        catch
+        {
+            semConexao = true;
+        }
+        carregando = false;
     }
+
+    private decimal TotalAReceber => clientes.Sum(c => c.SaldoDevedor);
+
+    private List<ClienteResponseDto> Devedores =>
+        clientes.Where(c => c.SaldoDevedor > 0)
+                .OrderByDescending(c => c.SaldoDevedor)
+                .Take(6)
+                .ToList();
+
+    private List<ProdutoResponseDto> EstoqueBaixo =>
+        produtos.Where(p => p.EstoqueAtual < LimiteEstoqueBaixo)
+                .OrderBy(p => p.EstoqueAtual)
+                .Take(6)
+                .ToList();
 }

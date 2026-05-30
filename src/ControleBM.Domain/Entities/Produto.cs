@@ -15,7 +15,7 @@ namespace ControleBM.Domain.Entities
         {
             if (EstoqueAtual < quantidade)
             {
-                EstoqueAtual += quantidade;
+                throw new InvalidOperationException($"Estoque insuficiente para o produto '{Nome}'. Disponível: {EstoqueAtual}, solicitado: {quantidade}.");
             }
             EstoqueAtual -= quantidade;
         }

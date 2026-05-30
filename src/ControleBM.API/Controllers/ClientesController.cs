@@ -21,12 +21,14 @@ namespace ControleBM.API.Controllers
         public async Task<ActionResult<List<ClienteResponseDto>>> GetClientes()
         {
             var clientes = await _context.Clientes
+                .Where(c => c.Ativo)
                 .Select(c => new ClienteResponseDto
                 {
                     Id = c.Id,
                     Nome = c.Nome,
                     Telefone = c.Telefone,
-                    SaldoDevedor = c.SaldoDevedor
+                    SaldoDevedor = c.SaldoDevedor,
+                    Ativo = c.Ativo
                 })
                 .ToListAsync();
 
@@ -43,7 +45,8 @@ namespace ControleBM.API.Controllers
                     Id = c.Id,
                     Nome = c.Nome,
                     Telefone = c.Telefone,
-                    SaldoDevedor = c.SaldoDevedor
+                    SaldoDevedor = c.SaldoDevedor,
+                    Ativo = c.Ativo
                 })
                 .FirstOrDefaultAsync();
 
@@ -54,7 +57,7 @@ namespace ControleBM.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ClienteResponseDto>> CreateCliente(ClienteResponseDto request)
+        public async Task<ActionResult<ClienteResponseDto>> CreateCliente(ClienteRequestDto request)
         {
             var cliente = new Cliente
             {
@@ -78,7 +81,7 @@ namespace ControleBM.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateCliente(Guid id, [FromBody] ClienteResponseDto dto)
+        public async Task<IActionResult> UpdateCliente(Guid id, [FromBody] ClienteRequestDto dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -105,6 +108,7 @@ namespace ControleBM.API.Controllers
             if (cliente == null)
                 return NotFound(new { message = "Cliente não encontrado" });
 
+            cliente.Ativo = false;
             await _context.SaveChangesAsync();
 
             return NoContent();

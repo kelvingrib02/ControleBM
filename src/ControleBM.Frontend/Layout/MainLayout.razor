@@ -1,15 +1,16 @@
-﻿@inherits LayoutComponentBase
+@inherits LayoutComponentBase
 
 <div class="page-layout">
 
-    <div class="sidebar-wrapper d-none d-md-block">
-        <NavMenu />
+    <div class="sidebar-wrapper @(menuAberto ? "aberto" : "")">
+        <NavMenu OnLinkClick="FecharMenu" />
     </div>
+    <div class="sidebar-backdrop @(menuAberto ? "aberto" : "")" @onclick="FecharMenu"></div>
 
     <main class="content-wrapper">
-        <div class="mobile-header d-md-none">
+        <div class="mobile-header">
             <span class="mobile-title">Bar do Marcio</span>
-            <button class="mobile-menu-btn">☰</button>
+            <button class="mobile-menu-btn" @onclick="AlternarMenu" aria-label="Abrir menu">☰</button>
         </div>
 
         <div class="content-body fade-in">
@@ -17,3 +18,10 @@
         </div>
     </main>
 </div>
+
+@code {
+    private bool menuAberto;
+
+    private void AlternarMenu() => menuAberto = !menuAberto;
+    private void FecharMenu() => menuAberto = false;
+}

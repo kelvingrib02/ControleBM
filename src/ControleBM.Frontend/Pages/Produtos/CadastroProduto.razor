@@ -1,80 +1,101 @@
-﻿@page "/produtos/cadastro"
+@page "/produtos/cadastro"
+@using ControleBM.Shared.DTOs
+@using ControleBM.Shared.Enums
+@using ControleBM.Frontend.Services
+@inject IProdutoService ProdutoService
 @inject NavigationManager Navigation
 
 <div class="form-container">
     <div class="form-header">
         <button class="btn-back" @onclick="Voltar">← Voltar</button>
-        <h2>Novo Produto</h2>
+        <h1>Novo Produto</h1>
     </div>
 
-    <EditForm Model="@produto" OnValidSubmit="Salvar" class="form">
+    <EditForm Model="@produto" OnValidSubmit="Salvar">
         <DataAnnotationsValidator />
 
-        <div class="form-grid">
-            <div class="form-group">
-                <label>Nome do Produto</label>
-                <InputText @bind-Value="produto.Nome" class="form-input" placeholder="Digite o nome" />
-                <ValidationMessage For="@(() => produto.Nome)" />
+        <div class="form-card">
+            <div class="form-grid">
+                <div class="form-group full-width">
+                    <label>Nome do produto</label>
+                    <InputText @bind-Value="produto.Nome" class="form-input" placeholder="Ex: Cerveja Skol lata" />
+                    <ValidationMessage For="@(() => produto.Nome)" />
+                </div>
+
+                <div class="form-group">
+                    <label>Categoria</label>
+                    <InputSelect @bind-Value="produto.Tipo" class="form-input">
+                        @foreach (var tipo in Enum.GetValues<TipoProduto>())
+                        {
+                            <option value="@tipo">@tipo</option>
+                        }
+                    </InputSelect>
+                </div>
+
+                <div class="form-group">
+                    <label>Estoque inicial</label>
+                    <InputNumber @bind-Value="produto.EstoqueAtual" class="form-input" placeholder="0" />
+                </div>
+
+                <div class="form-group">
+                    <label>Preço de venda</label>
+                    <div class="input-prefixo">
+                        <span class="prefixo">R$</span>
+                        <InputNumber @bind-Value="produto.PrecoVenda" class="form-input" step="0.01" placeholder="0,00" />
+                    </div>
+                    <ValidationMessage For="@(() => produto.PrecoVenda)" />
+                </div>
+
+                <div class="form-group">
+                    <label>Custo (quanto você paga)</label>
+                    <div class="input-prefixo">
+                        <span class="prefixo">R$</span>
+                        <InputNumber @bind-Value="produto.CustoUnitario" class="form-input" step="0.01" placeholder="0,00" />
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Observação (opcional)</label>
+                    <InputTextArea @bind-Value="produto.Descricao" class="form-input" rows="3"
+                                   placeholder="Alguma observação sobre o produto..." />
+                </div>
             </div>
 
-            <div class="form-group">
-                <label>Categoria</label>
-                <InputSelect @bind-Value="produto.Categoria" class="form-input">
-                    <option value="">Selecione...</option>
-                    <option value="Eletrônicos">Eletrônicos</option>
-                    <option value="Roupas">Roupas</option>
-                    <option value="Alimentos">Alimentos</option>
-                </InputSelect>
-            </div>
+            @if (!string.IsNullOrEmpty(erro))
+            {
+                <p class="validation-message">@erro</p>
+            }
 
-            <div class="form-group">
-                <label>Preço</label>
-                <InputNumber @bind-Value="produto.Preco" class="form-input" placeholder="0,00" />
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary" @onclick="Voltar">Cancelar</button>
+                <button type="submit" class="btn btn-primary" disabled="@salvando">
+                    @(salvando ? "Salvando..." : "Salvar Produto")
+                </button>
             </div>
-
-            <div class="form-group">
-                <label>Estoque Inicial</label>
-                <InputNumber @bind-Value="produto.Estoque" class="form-input" placeholder="0" />
-            </div>
-
-            <div class="form-group full-width">
-                <label>Descrição</label>
-                <InputTextArea @bind-Value="produto.Descricao" class="form-input textarea" rows="4" placeholder="Descrição do produto..." />
-            </div>
-
-            <div class="form-group">
-                <label class="checkbox-label">
-                    <InputCheckbox @bind-Value="produto.Ativo" />
-                    <span>Produto ativo</span>
-                </label>
-            </div>
-        </div>
-
-        <div class="form-actions">
-            <button type="button" class="btn btn-secondary" @onclick="Voltar">Cancelar</button>
-            <button type="submit" class="btn btn-primary">Salvar Produto</button>
         </div>
     </EditForm>
 </div>
 
 @code {
-    private ProdutoForm produto = new();
+    private ProdutoRequestDto produto = new() { Nome = "", Tipo = TipoProduto.Cerveja };
+    private bool salvando;
+    private string? erro;
 
-    private void Salvar()
+    private async Task Salvar()
     {
-        // Chamar API para salvar
-        Navigation.NavigateTo("/produtos");
+        salvando = true;
+        erro = null;
+        try
+        {
+            await ProdutoService.CreateProdutoAsync(produto);
+            Navigation.NavigateTo("/produtos");
+        }
+        catch
+        {
+            erro = "Não foi possível salvar. Verifique a conexão e tente de novo.";
+            salvando = false;
+        }
     }
 
     private void Voltar() => Navigation.NavigateTo("/produtos");
-
-    public class ProdutoForm
-    {
-        public string Nome { get; set; } = "";
-        public string Categoria { get; set; } = "";
-        public decimal Preco { get; set; }
-        public int Estoque { get; set; }
-        public string Descricao { get; set; } = "";
-        public bool Ativo { get; set; } = true;
-    }
 }

@@ -1,90 +1,125 @@
-﻿@page "/produtos"
+@page "/produtos"
 @using ControleBM.Frontend.Services
 @using ControleBM.Shared.DTOs
 @using ControleBM.Shared.Enums
 @inject IProdutoService ProdutoService
 @inject NavigationManager Navigation
+@inject IJSRuntime JS
 
-<div class="page-container">
-    <div class="page-header">
-        <h2>Produtos</h2>
-        <button class="btn btn-primary" @onclick="NovoProduto">
-            + Novo Produto
-        </button>
+<div class="page-header">
+    <div>
+        <h1>Produtos</h1>
+        <p class="page-subtitle">@produtos.Count cadastrados</p>
     </div>
+    <button class="btn btn-primary btn-lg" @onclick="NovoProduto">+ Novo Produto</button>
+</div>
 
-    <div class="filters-bar">
-        <input type="text" class="input-search" placeholder="Buscar produto..." @bind="searchTerm" @bind:event="oninput" />
-        <select class="input-select" @bind="filtroTipo">
-            <Component />
-        </select>
-    </div>
+<div class="filters-bar">
+    <input type="text" class="input-search" placeholder="Buscar produto pelo nome..."
+           @bind="searchTerm" @bind:event="oninput" />
+    <select class="input-select" @bind="filtroTipo">
+        <option value="">Todas as categorias</option>
+        @foreach (var tipo in Enum.GetValues<TipoProduto>())
+        {
+            <option value="@tipo">@tipo</option>
+        }
+    </select>
+</div>
 
+@if (semConexao)
+{
     <div class="table-container">
-        <table class="data-table">
-            <thead>
+        <div class="vazio">Não foi possível conectar ao servidor.<br />Verifique se o sistema está ligado e tente de novo.</div>
+    </div>
+}
+else
+{
+<div class="table-container">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Custo</th>
+                <th>Preço</th>
+                <th>Estoque</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (!ProdutosFiltrados.Any())
+            {
                 <tr>
-                    <th>Nome</th>
-                    <th>Categoria</th>
-                    <th>Custo</th>
-                    <th>Preço</th>
-                    <th>Estoque</th>
-                    <th>Ações</th>
+                    <td colspan="6"><div class="vazio">Nenhum produto encontrado.</div></td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var produto in produtos)
+            }
+            else
+            {
+                @foreach (var produto in ProdutosFiltrados)
                 {
                     <tr>
-                        <td>@produto.Nome</td>
+                        <td class="celula-forte">@produto.Nome</td>
                         <td>@produto.Tipo</td>
-                        <td>R$ @produto.CustoUnitario.ToString("N2")</td>
-                        <td>R$ @produto.PrecoVenda.ToString("N2")</td>
+                        <td>@produto.CustoUnitario.ToString("C")</td>
+                        <td>@produto.PrecoVenda.ToString("C")</td>
                         <td>
-                            <span class="stock @(produto.EstoqueAtual < 10 ? "low" : "")">
+                            <span class="pill @EstoquePill(produto.EstoqueAtual)">
                                 @produto.EstoqueAtual unid.
                             </span>
                         </td>
                         <td>
-                            <div class="actions">
-                                <button class="btn-icon" title="Editar" @onclick="() => Editar(produto.Id)">✏️</button>
-                                <button class="btn-icon" title="Excluir" @onclick="() => Excluir(produto.Id)">🗑️</button>
+                            <div class="col-acoes">
+                                <button class="btn-acao editar" @onclick="() => Editar(produto.Id)">✏️ Editar</button>
+                                <button class="btn-acao excluir" @onclick="() => Excluir(produto)">🗑️ Excluir</button>
                             </div>
                         </td>
                     </tr>
                 }
-            </tbody>
-        </table>
-    </div>
+            }
+        </tbody>
+    </table>
 </div>
+}
 
 @code {
+    private const int LimiteEstoqueBaixo = 10;
+
     private List<ProdutoResponseDto> produtos = new();
     private string searchTerm = "";
-    private string filtroCategoria = "";
     private TipoProduto? filtroTipo = null;
+    private bool semConexao;
 
     protected override async Task OnInitializedAsync()
     {
-        produtos = await ProdutoService.GetProdutosAsync();
+        try
+        {
+            produtos = await ProdutoService.GetProdutosAsync();
+        }
+        catch
+        {
+            semConexao = true;
+        }
     }
 
     private IEnumerable<ProdutoResponseDto> ProdutosFiltrados =>
         produtos.Where(p =>
             (string.IsNullOrWhiteSpace(searchTerm) ||
              p.Nome.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) &&
-            (!filtroTipo.HasValue || p.Tipo == filtroTipo)
-        );
+            (!filtroTipo.HasValue || p.Tipo == filtroTipo));
 
-    private void NovoProduto()
-        => Navigation.NavigateTo("/produtos/cadastro");
+    private static string EstoquePill(int estoque) =>
+        estoque == 0 ? "pill-perigo" : estoque < LimiteEstoqueBaixo ? "pill-alerta" : "pill-ok";
 
-    private void Editar(Guid id)
-        => Navigation.NavigateTo($"/produtos/editar/{id}");
+    private void NovoProduto() => Navigation.NavigateTo("/produtos/cadastro");
 
-    private async Task Excluir(Guid id)
+    private void Editar(Guid id) => Navigation.NavigateTo($"/produtos/editar/{id}");
+
+    private async Task Excluir(ProdutoResponseDto produto)
     {
-        await ProdutoService.DeleteProdutoAsync(id);
+        var ok = await JS.InvokeAsync<bool>("confirm", $"Excluir o produto \"{produto.Nome}\"?");
+        if (!ok) return;
+
+        await ProdutoService.DeleteProdutoAsync(produto.Id);
         produtos = await ProdutoService.GetProdutosAsync();
     }
 }
